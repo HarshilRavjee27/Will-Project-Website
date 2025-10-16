@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Empowering the Nation</title>
+    <link rel="stylesheet" href="css-assets/Style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="_images/Logo2.png" alt="Skills Training Center Logo" class="logo-img">
+            </div>
+            <nav class="nav">
+                <a href="HomePage.html">Home</a>
+                <a href="FirstAid.html">Courses</a>
+                <a href="AboutUs.html">fees</a>
+                <a href="AboutUs.html">About Us</a>
+                <a href="ContactUs.html"class="active">Contact</a>
+            </nav>
+             <div class="header-icons">
+                <div class="search-icon" onclick="openSearch()">🔍</div>
+                <a href="signUp.html" class="signup-button">Sign Up</a>
+            </div>
+        </header>
+
+         <!-- Search Modal -->
+        <div class="search-modal" id="searchModal">
+            <div class="search-container">
+                <div class="search-header">
+                    <h3>Search</h3>
+                    <button class="close-search" onclick="closeSearch()">×</button>
+                </div>
+                <div class="search-input-wrapper">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        id="searchInput" 
+                        placeholder="Search for courses, pages, or information..."
+                        autocomplete="off"
+                    >
+                </div>
+                <div class="search-results" id="searchResults">
+                    <div class="no-results">Start typing to search...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Contact Information Section -->
+            <section class="contact-info-section">
+                <h2 class="contact-title">Contact Us</h2>
+                
+                <div class="contact-details">
+                    <p class="contact-intro">
+                        Reach out to us through the details below or visit us during business hours.
+                    </p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon email-icon">📧</div>
+                        <div class="contact-text">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:support@skillstream.com" class="contact-link">support@skillstream.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon phone-icon">📞</div>
+                        <div class="contact-text">
+                            <span class="contact-label">Phone Number</span>
+                            <a href="tel:+27813334759" class="contact-link">+27 81 333 4759</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Get in Touch Form -->
+                <div class="get-in-touch">
+                    <h2>Get in Touch</h2>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="text" placeholder="Subject" required>
+                        <textarea placeholder="Message" required></textarea>
+                        <button type="submit" class="send-message">Send Message</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Venues Section -->
+            <section class="venues-section">
+                <h2 class="venues-title">Our Johannesburg Venues</h2>
+                
+                <div class="venues-grid">
+                    <!-- Sandton Campus -->
+                    <div class="venue-card sandton">
+                        <div class="venue-image">
+                            <img src="_images/SANDTON.png" alt="Sandton Campus">
+                        </div>
+                        <div class="venue-content">
+                            <h3 class="venue-name">Johannesburg - Sandton Campus</h3>
+                            <p class="venue-address">📍 150 Rivonia Rd, Sandton, Johannesburg, 2196</p>
+                            <a href="https://maps.google.com/?q=150+Rivonia+Rd,+Sandton,+Johannesburg,+2196" target="_blank" class="venue-link">View on Map</a>
+                        </div>
+                    </div>
+
+                    <!-- Rosebank Office -->
+                    <div class="venue-card rosebank">
+                        <div class="venue-image">
+                            <img src="_images/rosebank.png" alt="Rosebank Office">
+                        </div>
+                        <div class="venue-content">
+                            <h3 class="venue-name">Johannesburg - Rosebank Office</h3>
+                            <p class="venue-address">📍 Rosebank Towers, 15 Biermann Ave, Rosebank, Johannesburg, 2196</p>
+                            <a href="https://maps.google.com/?q=Rosebank+Towers,+15+Biermann+Ave,+Rosebank,+Johannesburg,+2196" target="_blank" class="venue-link">View on Map</a>
+                        </div>
+                    </div>
+
+                    <!-- Soweto Campus -->
+                    <div class="venue-card soweto">
+                        <div class="venue-image">
+                            <img src="_images/soweto.png" alt="Soweto Campus">
+                        </div>
+                        <div class="venue-content">
+                            <h3 class="venue-name">Johannesburg - Soweto Campus</h3>
+                            <p class="venue-address">📍 University of Johannesburg, Soweto Campus, Chris Hani Rd, Soweto, 1804</p>
+                            <a href="https://maps.google.com/?q=University+of+Johannesburg,+Soweto+Campus,+Chris+Hani+Rd,+Soweto,+1804" target="_blank" class="venue-link">View on Map</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Locations Section -->
+        <section class="locations-section">
+            <h2>Our Locations</h2>
+            <p>Visit us at one of our convenient locations across Johannesburg.</p>
+            <div class="map-placeholder">
+                Interactive Map Placeholder
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">Company</a>
+                <a href="#">Resources</a>
+                <a href="#">Legal</a>
+            </div>
+            <div class="social-icons">
+                <span class="social-icon">📘</span>
+                <span class="social-icon">🐦</span>
+                <span class="social-icon">💼</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple tooltip functionality
+        function showTooltip(tooltipId, event) {
+            const tooltip = document.getElementById(tooltipId);
+            tooltip.style.display = 'block';
+            tooltip.style.left = event.pageX + 10 + 'px';
+            tooltip.style.top = event.pageY - 10 + 'px';
+        }
+
+        function hideTooltip(tooltipId) {
+            document.getElementById(tooltipId).style.display = 'none';
+        }
+
+        // Map functionality
+        function openMaps(location) {
+            const addresses = {
+                'rosebank': 'Rosebank Towers, 15 Biermann Ave, Rosebank, Johannesburg, 2196',
+                'sandton': '150 Rivonia Rd, Sandton, Johannesburg, 2196',
+                'soweto': 'University of Johannesburg, Soweto Campus, Chris Hani Rd, Soweto, 1804'
+            };
+            
+            const address = encodeURIComponent(addresses[location]);
+            window.open(`https://www.google.com/maps/search/${address}`, '_blank');
+        }
+
+        // Add event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search icon tooltip
+            const searchIcon = document.querySelector('.search-icon');
+            searchIcon.addEventListener('mouseenter', (e) => showTooltip('searchTooltip', e));
+            searchIcon.addEventListener('mouseleave', () => hideTooltip('searchTooltip'));
+
+            // Contact section tooltip
+            const contactSection = document.querySelector('.contact-info-section');
+            contactSection.addEventListener('mouseenter', (e) => showTooltip('contactTooltip', e));
+            contactSection.addEventListener('mouseleave', () => hideTooltip('contactTooltip'));
+
+            // Map button tooltip
+            const mapButton = document.querySelector('.map-button');
+            if (mapButton) {
+                mapButton.addEventListener('mouseenter', (e) => showTooltip('mapTooltip', e));
+                mapButton.addEventListener('mouseleave', () => hideTooltip('mapTooltip'));
+            }
+        });
+    </script>
+
+ <script>
+        // Search data mapping keywords to pages
+        const searchData = [
+            {
+                title: "Home Page",
+                url: "HomePage.html",
+                keywords: ["home", "homepage", "main", "start", "landing", "empowering", "nation", "skills", "learn"],
+                description: "Main landing page with course overview"
+            },
+            {
+                title: "Courses & Fee",
+                url: "FeeCalculator.html",
+                keywords: ["courses", "fees", "calculator", "pricing", "cost", "payment", "enroll", "register", "fee", "price"],
+                description: "View all courses and calculate fees"
+            },
+            {
+                title: "About Us",
+                url: "AboutUs.html",
+                keywords: ["about", "mission", "team", "who", "vision", "story", "company", "organization"],
+                description: "Learn more about our mission and team"
+            },
+            {
+                title: "Contact Us",
+                url: "ContactUs.html",
+                keywords: ["contact", "email", "phone", "address", "location", "reach", "get in touch", "message"],
+                description: "Get in touch with us"
+            },
+            {
+                title: "First Aid Course",
+                url: "FirstAid.html",
+                keywords: ["first aid", "medical", "emergency", "cpr", "life support", "health", "safety"],
+                description: "6-month course - First aid awareness and basic life support"
+            },
+            {
+                title: "Sewing Course",
+                url: "Sewing.html",
+                keywords: ["sewing", "tailoring", "alterations", "garments", "clothes", "fashion", "textiles"],
+                description: "6-month course - Alterations and new garment tailoring"
+            },
+            {
+                title: "Life Skills Course",
+                url: "LifeSkills.html",
+                keywords: ["life skills", "personal development", "essential skills", "basic necessities"],
+                description: "6-month course - Skills for basic life necessities"
+            },
+            {
+                title: "Landscaping Course",
+                url: "LandScaping.html",
+                keywords: ["landscaping", "garden design", "outdoor", "gardens", "plants", "landscape"],
+                description: "6-month course - Landscaping services for gardens"
+            },
+            {
+                title: "Child Minding Course",
+                url: "ChildMinding.html",
+                keywords: ["child minding", "childcare", "baby care", "children", "kids", "nanny", "babysitting"],
+                description: "6-week course - Basic child and baby care"
+            },
+            {
+                title: "Cooking Course",
+                url: "Cooking.html",
+                keywords: ["cooking", "food", "meals", "nutrition", "chef", "culinary", "kitchen"],
+                description: "6-week course - Prepare and cook nutritious family meals"
+            },
+            {
+                title: "Garden Maintenance Course",
+                url: "GardenMaintainance.html",
+                keywords: ["garden maintenance", "gardening", "plants", "lawn", "outdoor maintenance"],
+                description: "6-week course - Basic gardening knowledge"
+            }
+        ];
+
+        function openSearch() {
+            document.getElementById('searchModal').classList.add('active');
+            document.getElementById('searchInput').focus();
+        }
+
+        function closeSearch() {
+            document.getElementById('searchModal').classList.remove('active');
+            document.getElementById('searchInput').value = '';
+            document.getElementById('searchResults').innerHTML = '<div class="no-results">Start typing to search...</div>';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('searchModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSearch();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSearch();
+            }
+        });
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            const resultsContainer = document.getElementById('searchResults');
+
+            if (query.length === 0) {
+                resultsContainer.innerHTML = '<div class="no-results">Start typing to search...</div>';
+                return;
+            }
+
+            // Filter search data
+            const results = searchData.filter(item => {
+                return item.keywords.some(keyword => keyword.includes(query)) ||
+                       item.title.toLowerCase().includes(query) ||
+                       item.description.toLowerCase().includes(query);
+            });
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<div class="no-results">No results found. Try different keywords.</div>';
+                return;
+            }
+
+            // Display results
+            resultsContainer.innerHTML = results.map(item => `
+                <div class="search-result-item" onclick="navigateTo('${item.url}')">
+                    <div class="result-title">${item.title}</div>
+                    <div class="result-description">${item.description}</div>
+                </div>
+            `).join('');
+        });
+
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+
+</body>
+</html>

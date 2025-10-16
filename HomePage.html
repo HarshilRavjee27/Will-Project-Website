@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage - Empowering</title>
+    <link rel="stylesheet" href="css-assets/Style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="_images/Logo2.png" alt="Skills Training Center Logo" class="logo-img">
+            </div>
+            <nav class="nav">
+                <a href="HomePage.html" class="active">Home</a>
+                <a href="FirstAid.html">Courses</a>
+                <a href="AboutUs.html">fees</a>
+                <a href="AboutUs.html">About Us</a>
+                <a href="ContactUs.html">Contact</a>
+            </nav>
+            <div class="header-icons">
+                <div class="search-icon" onclick="openSearch()">🔍</div>
+                <a href="signUp.html" class="signup-button">Sign Up</a>
+            </div>
+        </header>
+
+        <!-- Search Modal -->
+        <div class="search-modal" id="searchModal">
+            <div class="search-container">
+                <div class="search-header">
+                    <h3>Search</h3>
+                    <button class="close-search" onclick="closeSearch()">×</button>
+                </div>
+                <div class="search-input-wrapper">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        id="searchInput" 
+                        placeholder="Search for courses, pages, or information..."
+                        autocomplete="off"
+                    >
+                </div>
+                <div class="search-results" id="searchResults">
+                    <div class="no-results">Start typing to search...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Learn New Skills Today</h1>
+                
+                <div class="hero-text">
+                    <p class="empowering-text">
+                        At <strong>Empowering the Nation</strong>, we believe that <em>dignity is found in skilled hands and a confident heart.</em>
+                    </p>
+                    <p class="mission-text">
+                        <strong>Our mission is to transform domestic work into a recognized and respected profession.</strong>
+                    </p>
+                    <p class="skills-text">
+                        By providing essential skills training, from advanced home care to sustainable gardening techniques.
+                    </p>
+                    <p class="nurturing-text">
+                        We are not just training workers; we are nurturing entrepreneurs, uplifting households, and strengthening the very fabric of our nation, one empowered individual at a time.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="_images/MainImage.png" alt="Togetherness image" class="hero-img">
+            </div>
+        </section>
+
+        <!-- Six Month Courses Section -->
+        <section class="courses-section six-month">
+            <h2 class="section-title">SIX-MONTH COURSES</h2>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <a href="FirstAid.html" class="course-link">
+                        <img src="_images/FirstAid.png" alt="First Aid Training" class="course-image">
+                        <div class="course-content">
+                            <span class="course-badge">First Aid</span>
+                            <p class="course-description">Purpose: To provide first aid awareness and basic life support</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <a href="Sewing.html" class="course-link">
+                        <img src="_images/Sewing.png" alt="Sewing Training" class="course-image">
+                        <div class="course-content">
+                            <span class="course-badge">Sewing</span>
+                            <p class="course-description">Purpose: To provide alterations and new garment tailoring services</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <a href="LifeSkills.html" class="course-link">
+                        <img src="_images/LifeSkills.png" alt="Life Skills Training" class="course-image">
+                        <div class="course-content">
+                            <span class="course-badge">Life Skills</span>
+                            <p class="course-description">Purpose: To provide skills to basic life necessities</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <a href="Landscaping.html" class="course-link">
+                        <img src="_images/LandScaping.png" alt="Landscaping Training" class="course-image">
+                        <div class="course-content">
+                            <span class="course-badge">Landscaping</span>
+                            <p class="course-description">Purpose: To provide Landscaping services for new and established gardens</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Six Week Courses Section -->
+        <section class="courses-section six-week">
+            <h2 class="section-title">SIX-WEEK COURSES</h2>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <a href="ChildMinding.html" class="course-link">
+                        <img src="_images/ChildMinding.png" alt="Child Minding Training" class="course-image">
+                        <div class="course-content">
+                            <span class="course-badge">Child Minding</span>
+                            <p class="course-description">Purpose: To provide basic child and baby care</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <a href="Cooking.html" class="course-link">
+                        <img src="_images/Cooking.png" alt="Cooking Training" class="course-image">
+                        <div class="course-content">
+                            <span class="course-badge">Cooking</span>
+                            <p class="course-description">Purpose: To prepare and cook nutritious family meals</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card">
+                    <a href="GardenMaintainance.html" class="course-link">
+                        <img src="_images/GardenMaintenance.png" alt="Garden Maintenance Training" class="course-image">
+                        <div class="course-content">
+                            <span class="course-badge">Garden Maintenance</span>
+                            <p class="course-description">Purpose: To provide basic gardening knowledge</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Empowering The Nation Works Section -->
+        <section class="how-it-works-section">
+            <h2 class="how-it-works-title">How Empowering The Nation Works</h2>
+            
+            <div class="how-it-works-grid">
+                <div class="how-it-works-card">
+                    <div class="icon-wrapper">
+                        <span class="icon">💡</span>
+                    </div>
+                    <h3>Explore Courses</h3>
+                    <p>Browse through our wide range of skill development courses designed to empower you with practical knowledge.</p>
+                </div>
+
+                <div class="how-it-works-card">
+                    <div class="icon-wrapper">
+                        <span class="icon">📚</span>
+                    </div>
+                    <h3>Enroll Early</h3>
+                    <p>Secure your spot in our transformative programs. Limited seats available to ensure personalized attention.</p>
+                </div>
+
+                <div class="how-it-works-card">
+                    <div class="icon-wrapper">
+                        <span class="icon">🎓</span>
+                    </div>
+                    <h3>Learn & Grow</h3>
+                    <p>Gain hands-on experience and certification that opens doors to new career opportunities and entrepreneurship.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Unlock Your Potential Today</h2>
+                <p class="cta-text">Join thousands of individuals who have transformed their lives through our comprehensive skills training programs.</p>
+                <a href="FeeCalculator.html" class="cta-button">Start Learning Now</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">Company</a>
+                <a href="#">Resources</a>
+                <a href="#">Legal</a>
+            </div>
+            <div class="social-icons">
+                <span class="social-icon">📘</span>
+                <span class="social-icon">🐦</span>
+                <span class="social-icon">💼</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Search data mapping keywords to pages
+        const searchData = [
+            {
+                title: "Home Page",
+                url: "HomePage.html",
+                keywords: ["home", "homepage", "main", "start", "landing", "empowering", "nation", "skills", "learn"],
+                description: "Main landing page with course overview"
+            },
+            {
+                title: "Courses & Fee",
+                url: "FeeCalculator.html",
+                keywords: ["courses", "fees", "calculator", "pricing", "cost", "payment", "enroll", "register", "fee", "price"],
+                description: "View all courses and calculate fees"
+            },
+            {
+                title: "About Us",
+                url: "AboutUs.html",
+                keywords: ["about", "mission", "team", "who", "vision", "story", "company", "organization"],
+                description: "Learn more about our mission and team"
+            },
+            {
+                title: "Contact Us",
+                url: "ContactUs.html",
+                keywords: ["contact", "email", "phone", "address", "location", "reach", "get in touch", "message"],
+                description: "Get in touch with us"
+            },
+            {
+                title: "First Aid Course",
+                url: "FirstAid.html",
+                keywords: ["first aid", "medical", "emergency", "cpr", "life support", "health", "safety"],
+                description: "6-month course - First aid awareness and basic life support"
+            },
+            {
+                title: "Sewing Course",
+                url: "Sewing.html",
+                keywords: ["sewing", "tailoring", "alterations", "garments", "clothes", "fashion", "textiles"],
+                description: "6-month course - Alterations and new garment tailoring"
+            },
+            {
+                title: "Life Skills Course",
+                url: "LifeSkills.html",
+                keywords: ["life skills", "personal development", "essential skills", "basic necessities"],
+                description: "6-month course - Skills for basic life necessities"
+            },
+            {
+                title: "Landscaping Course",
+                url: "LandScaping.html",
+                keywords: ["landscaping", "garden design", "outdoor", "gardens", "plants", "landscape"],
+                description: "6-month course - Landscaping services for gardens"
+            },
+            {
+                title: "Child Minding Course",
+                url: "ChildMinding.html",
+                keywords: ["child minding", "childcare", "baby care", "children", "kids", "nanny", "babysitting"],
+                description: "6-week course - Basic child and baby care"
+            },
+            {
+                title: "Cooking Course",
+                url: "Cooking.html",
+                keywords: ["cooking", "food", "meals", "nutrition", "chef", "culinary", "kitchen"],
+                description: "6-week course - Prepare and cook nutritious family meals"
+            },
+            {
+                title: "Garden Maintenance Course",
+                url: "GardenMaintainance.html",
+                keywords: ["garden maintenance", "gardening", "plants", "lawn", "outdoor maintenance"],
+                description: "6-week course - Basic gardening knowledge"
+            }
+        ];
+
+        function openSearch() {
+            document.getElementById('searchModal').classList.add('active');
+            document.getElementById('searchInput').focus();
+        }
+
+        function closeSearch() {
+            document.getElementById('searchModal').classList.remove('active');
+            document.getElementById('searchInput').value = '';
+            document.getElementById('searchResults').innerHTML = '<div class="no-results">Start typing to search...</div>';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('searchModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSearch();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSearch();
+            }
+        });
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            const resultsContainer = document.getElementById('searchResults');
+
+            if (query.length === 0) {
+                resultsContainer.innerHTML = '<div class="no-results">Start typing to search...</div>';
+                return;
+            }
+
+            // Filter search data
+            const results = searchData.filter(item => {
+                return item.keywords.some(keyword => keyword.includes(query)) ||
+                       item.title.toLowerCase().includes(query) ||
+                       item.description.toLowerCase().includes(query);
+            });
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<div class="no-results">No results found. Try different keywords.</div>';
+                return;
+            }
+
+            // Display results
+            resultsContainer.innerHTML = results.map(item => `
+                <div class="search-result-item" onclick="navigateTo('${item.url}')">
+                    <div class="result-title">${item.title}</div>
+                    <div class="result-description">${item.description}</div>
+                </div>
+            `).join('');
+        });
+
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

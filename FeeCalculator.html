@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Calculator - Empowering the Nation</title>
+    <link rel="stylesheet" href="css-assets/Style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="_images/Logo2.png" alt="Skills Training Center Logo" class="logo-img">
+            </div>
+            <nav class="nav">
+                <a href="HomePage.html">Home</a>
+                <a href="FirstAid.html">Courses</a>
+                <a href="AboutUs.html"class="active">fees</a>
+                <a href="AboutUs.html">About Us</a>
+                <a href="ContactUs.html">Contact</a>
+            </nav>
+             <div class="header-icons">
+                <div class="search-icon" onclick="openSearch()">🔍</div>
+                <a href="signUp.html" class="signup-button">Sign Up</a>
+            </div>
+        </header>
+
+         <!-- Search Modal -->
+        <div class="search-modal" id="searchModal">
+            <div class="search-container">
+                <div class="search-header">
+                    <h3>Search</h3>
+                    <button class="close-search" onclick="closeSearch()">×</button>
+                </div>
+                <div class="search-input-wrapper">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        id="searchInput" 
+                        placeholder="Search for courses, pages, or information..."
+                        autocomplete="off"
+                    >
+                </div>
+                <div class="search-results" id="searchResults">
+                    <div class="no-results">Start typing to search...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enroll Section -->
+        <section class="enroll-section">
+            <h1>Enroll in Your Dream Course</h1>
+            <p>Take the first step towards a brighter future with Empowering the Nation.</p>
+            <div class="progress-bar">
+                <span class="active-step">1</span>
+                <hr>
+                <span>2</span>
+                <hr>
+                <span>3</span>
+            </div>
+        </section>
+
+        <!-- Contact Details Form -->
+        <section class="contact-details">
+            <h2>Contact Details</h2>
+            <form id="contactForm">
+                <div class="form-row">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <textarea placeholder="Any special requirements or comments?" rows="4"></textarea>
+            </form>
+            <button class="next-step">Next Step</button>
+        </section>
+
+        <!-- Course Selection -->
+        <section class="course-selection-section">
+            <h3>Select Courses</h3>
+            <div class="course-options">
+                <label class="course-option">
+                    <input type="checkbox" name="course" value="1500">
+                    <div class="course-info">
+                        <span class="course-name">First Aid</span>
+                        <span class="course-duration">6 months</span>
+                    </div>
+                    <span class="course-price">R1500.00</span>
+                </label>
+                <label class="course-option">
+                    <input type="checkbox" name="course" value="1500">
+                    <div class="course-info">
+                        <span class="course-name">Sewing</span>
+                        <span class="course-duration">6 months</span>
+                    </div>
+                    <span class="course-price">R1500.00</span>
+                </label>
+                <label class="course-option">
+                    <input type="checkbox" name="course" value="1500">
+                    <div class="course-info">
+                        <span class="course-name">Landscaping</span>
+                        <span class="course-duration">6 months</span>
+                    </div>
+                    <span class="course-price">R1500.00</span>
+                </label>
+                <label class="course-option">
+                    <input type="checkbox" name="course" value="1500">
+                    <div class="course-info">
+                        <span class="course-name">Life Skills</span>
+                        <span class="course-duration">6 months</span>
+                    </div>
+                    <span class="course-price">R1500.00</span>
+                </label>
+                <label class="course-option">
+                    <input type="checkbox" name="course" value="750">
+                    <div class="course-info">
+                        <span class="course-name">Child Minding</span>
+                        <span class="course-duration">6 weeks</span>
+                    </div>
+                    <span class="course-price">R750.00</span>
+                </label>
+                <label class="course-option">
+                    <input type="checkbox" name="course" value="750">
+                    <div class="course-info">
+                        <span class="course-name">Cooking</span>
+                        <span class="course-duration">6 weeks</span>
+                    </div>
+                    <span class="course-price">R750.00</span>
+                </label>
+                <label class="course-option">
+                    <input type="checkbox" name="course" value="750">
+                    <div class="course-info">
+                        <span class="course-name">Garden Maintenance</span>
+                        <span class="course-duration">6 weeks</span>
+                    </div>
+                    <span class="course-price">R750.00</span>
+                </label>
+            </div>
+
+            <!-- Cost Summary -->
+            <div class="cost-summary">
+                <h3>Cost Summary</h3>
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span class="subtotal">R0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Bundle Discount ():</span>
+                    <span class="discount">-R0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>VAT (15%):</span>
+                    <span class="vat">R0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span class="total-amount">R0.00</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Company</a>
+            <a href="#">Resources</a>
+            <a href="#">Legal</a>
+        </div>
+        <div class="social-icons">
+            <span class="social-icon">📘</span>
+            <span class="social-icon">🐦</span>
+            <span class="social-icon">💼</span>
+        </div>
+    </footer>
+
+    <script>
+        const checkboxes = document.querySelectorAll('input[name="course"]');
+        const subtotal = document.querySelector('.cost-summary .subtotal');
+        const discount = document.querySelector('.cost-summary .discount');
+        const vat = document.querySelector('.cost-summary .vat');
+        const total = document.querySelector('.cost-summary .total-amount');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateCost);
+        });
+
+        function updateCost() {
+            let selectedCourses = [];
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    const price = parseFloat(checkbox.value);
+                    selectedCourses.push(price);
+                }
+            });
+
+            let subTotal = selectedCourses.reduce((a, b) => a + b, 0);
+            let bundleDiscount = selectedCourses.length >= 2 ? subTotal * 0.1 : 0;
+            let vatAmount = (subTotal - bundleDiscount) * 0.15;
+            let finalTotal = subTotal - bundleDiscount + vatAmount;
+
+            subtotal.textContent = `R${subTotal.toFixed(2)}`;
+            discount.textContent = `-R${bundleDiscount.toFixed(2)}`;
+            vat.textContent = `R${vatAmount.toFixed(2)}`;
+            total.textContent = `R${finalTotal.toFixed(2)}`;
+        }
+    </script>
+
+   <script>
+        // Search data mapping keywords to pages
+        const searchData = [
+            {
+                title: "Home Page",
+                url: "HomePage.html",
+                keywords: ["home", "homepage", "main", "start", "landing", "empowering", "nation", "skills", "learn"],
+                description: "Main landing page with course overview"
+            },
+            {
+                title: "Courses & Fee",
+                url: "FeeCalculator.html",
+                keywords: ["courses", "fees", "calculator", "pricing", "cost", "payment", "enroll", "register", "fee", "price"],
+                description: "View all courses and calculate fees"
+            },
+            {
+                title: "About Us",
+                url: "AboutUs.html",
+                keywords: ["about", "mission", "team", "who", "vision", "story", "company", "organization"],
+                description: "Learn more about our mission and team"
+            },
+            {
+                title: "Contact Us",
+                url: "ContactUs.html",
+                keywords: ["contact", "email", "phone", "address", "location", "reach", "get in touch", "message"],
+                description: "Get in touch with us"
+            },
+            {
+                title: "First Aid Course",
+                url: "FirstAid.html",
+                keywords: ["first aid", "medical", "emergency", "cpr", "life support", "health", "safety"],
+                description: "6-month course - First aid awareness and basic life support"
+            },
+            {
+                title: "Sewing Course",
+                url: "Sewing.html",
+                keywords: ["sewing", "tailoring", "alterations", "garments", "clothes", "fashion", "textiles"],
+                description: "6-month course - Alterations and new garment tailoring"
+            },
+            {
+                title: "Life Skills Course",
+                url: "LifeSkills.html",
+                keywords: ["life skills", "personal development", "essential skills", "basic necessities"],
+                description: "6-month course - Skills for basic life necessities"
+            },
+            {
+                title: "Landscaping Course",
+                url: "LandScaping.html",
+                keywords: ["landscaping", "garden design", "outdoor", "gardens", "plants", "landscape"],
+                description: "6-month course - Landscaping services for gardens"
+            },
+            {
+                title: "Child Minding Course",
+                url: "ChildMinding.html",
+                keywords: ["child minding", "childcare", "baby care", "children", "kids", "nanny", "babysitting"],
+                description: "6-week course - Basic child and baby care"
+            },
+            {
+                title: "Cooking Course",
+                url: "Cooking.html",
+                keywords: ["cooking", "food", "meals", "nutrition", "chef", "culinary", "kitchen"],
+                description: "6-week course - Prepare and cook nutritious family meals"
+            },
+            {
+                title: "Garden Maintenance Course",
+                url: "GardenMaintainance.html",
+                keywords: ["garden maintenance", "gardening", "plants", "lawn", "outdoor maintenance"],
+                description: "6-week course - Basic gardening knowledge"
+            }
+        ];
+
+        function openSearch() {
+            document.getElementById('searchModal').classList.add('active');
+            document.getElementById('searchInput').focus();
+        }
+
+        function closeSearch() {
+            document.getElementById('searchModal').classList.remove('active');
+            document.getElementById('searchInput').value = '';
+            document.getElementById('searchResults').innerHTML = '<div class="no-results">Start typing to search...</div>';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('searchModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSearch();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSearch();
+            }
+        });
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            const resultsContainer = document.getElementById('searchResults');
+
+            if (query.length === 0) {
+                resultsContainer.innerHTML = '<div class="no-results">Start typing to search...</div>';
+                return;
+            }
+
+            // Filter search data
+            const results = searchData.filter(item => {
+                return item.keywords.some(keyword => keyword.includes(query)) ||
+                       item.title.toLowerCase().includes(query) ||
+                       item.description.toLowerCase().includes(query);
+            });
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<div class="no-results">No results found. Try different keywords.</div>';
+                return;
+            }
+
+            // Display results
+            resultsContainer.innerHTML = results.map(item => `
+                <div class="search-result-item" onclick="navigateTo('${item.url}')">
+                    <div class="result-title">${item.title}</div>
+                    <div class="result-description">${item.description}</div>
+                </div>
+            `).join('');
+        });
+
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandScaping- Empowering the Nation</title>
+     <link rel="stylesheet" href="css-assets/Style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="_images/Logo2.png" alt="Skills Training Center Logo" class="logo-img">
+            </div>
+            <nav class="nav">
+                <a href="HomePage.html">Home</a>
+                <a href="FeeCalculator.html">Courses</a>
+                <a href="AboutUs.html">About Us</a>
+                <a href="ContactUs.html">Contact</a>
+            </nav>
+             <div class="header-icons">
+                <div class="search-icon" onclick="openSearch()">🔍</div>
+                <a href="signUp.html" class="signup-button">Sign Up</a>
+            </div>
+        </header>
+
+        <!-- Search Modal -->
+        <div class="search-modal" id="searchModal">
+            <div class="search-container">
+                <div class="search-header">
+                    <h3>Search</h3>
+                    <button class="close-search" onclick="closeSearch()">×</button>
+                </div>
+                <div class="search-input-wrapper">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        id="searchInput" 
+                        placeholder="Search for courses, pages, or information..."
+                        autocomplete="off"
+                    >
+                </div>
+                <div class="search-results" id="searchResults">
+                    <div class="no-results">Start typing to search...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Course Detail Section -->
+        <section class="course-detail-section">
+            <!-- Left Side - Course Information -->
+            <div class="course-info">
+                <h1 class="course-title">Landscaping</h1>
+                
+                <p class="course-intro">
+                    Discover the art and science of landscaping with this hands-on course. 
+                    Learn about soil preparation, plant selection, and outdoor design techniques. 
+                    The course also covers sustainable gardening practices, irrigation, and seasonal care, 
+                    making you confident in creating and maintaining beautiful green spaces
+
+                </p>
+
+                <div class="learning-section">
+                    <h2 class="learning-title">What You'll Learn:</h2>
+                    
+                    <ul class="learning-list">
+                        <li>Garden planning and design</li>
+                        <li>Soil preparation and fertilization</li>
+                        <li>CPR and rescue breathing techniques</li>
+                        <li>Plant care and maintenance</li>
+                        <li>Sustainable landscaping practices</li>
+                        <li>Irrigation and water management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Side - Enrollment & Image -->
+            <div class="course-enrollment">
+                <div class="course-image-container">
+                    <img src="_images/LandScaping.png" alt="Landscaping" class="course-main-image">
+                </div>
+
+                <div class="enrollment-card">
+                    <div class="price-section">
+                        <h2 class="price">R1500</h2>
+                        <p class="payment-type">One time payment</p>
+                    </div>
+
+                    <button class="enroll-button" onclick="window.location.href='FeeCalculator.html'">
+                        ENROLL NOW
+                    </button>
+
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Search courses...">
+                        <button class="search-btn">🔍</button>
+                        <button class="help-btn">?</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">Company</a>
+                <a href="#">Resources</a>
+                <a href="#">Legal</a>
+            </div>
+            <div class="social-icons">
+                <span class="social-icon">📱</span>
+                <span class="social-icon">🐦</span>
+                <span class="social-icon">💼</span>
+            </div>
+        </footer>
+    </div>
+
+       <script>
+        // Search data mapping keywords to pages
+        const searchData = [
+            {
+                title: "Home Page",
+                url: "HomePage.html",
+                keywords: ["home", "homepage", "main", "start", "landing", "empowering", "nation", "skills", "learn"],
+                description: "Main landing page with course overview"
+            },
+            {
+                title: "Courses & Fee",
+                url: "FeeCalculator.html",
+                keywords: ["courses", "fees", "calculator", "pricing", "cost", "payment", "enroll", "register", "fee", "price"],
+                description: "View all courses and calculate fees"
+            },
+            {
+                title: "About Us",
+                url: "AboutUs.html",
+                keywords: ["about", "mission", "team", "who", "vision", "story", "company", "organization"],
+                description: "Learn more about our mission and team"
+            },
+            {
+                title: "Contact Us",
+                url: "ContactUs.html",
+                keywords: ["contact", "email", "phone", "address", "location", "reach", "get in touch", "message"],
+                description: "Get in touch with us"
+            },
+            {
+                title: "First Aid Course",
+                url: "FirstAid.html",
+                keywords: ["first aid", "medical", "emergency", "cpr", "life support", "health", "safety"],
+                description: "6-month course - First aid awareness and basic life support"
+            },
+            {
+                title: "Sewing Course",
+                url: "Sewing.html",
+                keywords: ["sewing", "tailoring", "alterations", "garments", "clothes", "fashion", "textiles"],
+                description: "6-month course - Alterations and new garment tailoring"
+            },
+            {
+                title: "Life Skills Course",
+                url: "LifeSkills.html",
+                keywords: ["life skills", "personal development", "essential skills", "basic necessities"],
+                description: "6-month course - Skills for basic life necessities"
+            },
+            {
+                title: "Landscaping Course",
+                url: "LandScaping.html",
+                keywords: ["landscaping", "garden design", "outdoor", "gardens", "plants", "landscape"],
+                description: "6-month course - Landscaping services for gardens"
+            },
+            {
+                title: "Child Minding Course",
+                url: "ChildMinding.html",
+                keywords: ["child minding", "childcare", "baby care", "children", "kids", "nanny", "babysitting"],
+                description: "6-week course - Basic child and baby care"
+            },
+            {
+                title: "Cooking Course",
+                url: "Cooking.html",
+                keywords: ["cooking", "food", "meals", "nutrition", "chef", "culinary", "kitchen"],
+                description: "6-week course - Prepare and cook nutritious family meals"
+            },
+            {
+                title: "Garden Maintenance Course",
+                url: "GardenMaintainance.html",
+                keywords: ["garden maintenance", "gardening", "plants", "lawn", "outdoor maintenance"],
+                description: "6-week course - Basic gardening knowledge"
+            }
+        ];
+
+        function openSearch() {
+            document.getElementById('searchModal').classList.add('active');
+            document.getElementById('searchInput').focus();
+        }
+
+        function closeSearch() {
+            document.getElementById('searchModal').classList.remove('active');
+            document.getElementById('searchInput').value = '';
+            document.getElementById('searchResults').innerHTML = '<div class="no-results">Start typing to search...</div>';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('searchModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSearch();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSearch();
+            }
+        });
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            const resultsContainer = document.getElementById('searchResults');
+
+            if (query.length === 0) {
+                resultsContainer.innerHTML = '<div class="no-results">Start typing to search...</div>';
+                return;
+            }
+
+            // Filter search data
+            const results = searchData.filter(item => {
+                return item.keywords.some(keyword => keyword.includes(query)) ||
+                       item.title.toLowerCase().includes(query) ||
+                       item.description.toLowerCase().includes(query);
+            });
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<div class="no-results">No results found. Try different keywords.</div>';
+                return;
+            }
+
+            // Display results
+            resultsContainer.innerHTML = results.map(item => `
+                <div class="search-result-item" onclick="navigateTo('${item.url}')">
+                    <div class="result-title">${item.title}</div>
+                    <div class="result-description">${item.description}</div>
+                </div>
+            `).join('');
+        });
+
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
