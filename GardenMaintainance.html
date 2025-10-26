@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garden Maintenance - Empowering the Nation</title>
      <link rel="stylesheet" href="css-assets/Style.css">
+    <script src="js-assets/Script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -15,7 +16,8 @@
             </div>
             <nav class="nav">
                 <a href="HomePage.html">Home</a>
-                <a href="FeeCalculator.html">Courses</a>
+                <a href="FirstAid.html"class="active">Courses</a>
+                <a href="FeeCalculator.html">Fees</a>
                 <a href="AboutUs.html">About Us</a>
                 <a href="ContactUs.html">Contact</a>
             </nav>
@@ -76,7 +78,7 @@
             <!-- Right Side - Enrollment & Image -->
             <div class="course-enrollment">
                 <div class="course-image-container">
-                    <img src="_images/GardenMaintenance.png" alt="Garden Maintenance" class="course-main-image">
+                    <img src="_images/GardenMaintenanceCard.jpg" alt="Garden Maintenance" class="course-main-image">
                 </div>
 
                 <div class="enrollment-card">
@@ -88,11 +90,68 @@
                     <button class="enroll-button" onclick="window.location.href='FeeCalculator.html'">
                         ENROLL NOW
                     </button>
+                </div>
+            </div>
+        </section>
 
-                    <div class="search-container">
-                        <input type="text" class="search-input" placeholder="Search courses...">
-                        <button class="search-btn">🔍</button>
-                        <button class="help-btn">?</button>
+        <!-- Course Tabs Section -->
+        <section class="course-tabs">
+            <div class="tab-bar">
+                <button class="tab-button" onclick="openTab('overview', this)">Overview</button>
+                <button class="tab-button active" onclick="openTab('instructor', this)">Instructor</button>
+                <button class="tab-button" onclick="openTab('reviews', this)">Reviews</button>
+                <select class="courses-dropdown" onchange="navigateToCourse(this.value)" aria-label="Select Course">
+                    <option value="" selected disabled>Courses ▼</option>
+                    <option value="FirstAid.html">First Aid Course</option>
+                    <option value="Sewing.html">Sewing Course</option>
+                    <option value="LifeSkills.html">Life Skills Course</option>
+                    <option value="LandScaping.html">LandScaping Course</option>
+                    <option value="ChildMinding.html">Child Minding Course</option>
+                    <option value="Cooking.html">Cooking Course</option>
+                </select>
+            </div>
+
+            <div id="overview" class="tab-pane">
+                <p>Ready to keep gardens flourishing all year round? This course is perfect for anyone wanting to master practical garden maintenance skills. From proper pruning techniques to managing common pests organically, you'll build real expertise through hands-on training with professional tools and methods. Whether you're caring for your own garden or starting a maintenance business, this course gives you the practical skills and knowledge to keep any garden healthy and beautiful.</p>
+            </div>
+
+            <div id="instructor" class="tab-pane active">
+                <div class="instructor-info">
+                    <img src="_images/jabu.jpg" alt="Jabu Molefe">
+                    <div>
+                        <h3>Jabu Molefe</h3>
+                        <p>An experienced horticulturist and garden maintenance specialist with over 22 years of hands-on experience caring for South African gardens, Jabu has an intuitive understanding of what plants need to thrive. Starting his career as a gardener and progressing through formal horticultural training, he now runs a successful garden maintenance company and shares his extensive knowledge through training programs. His practical, no-nonsense teaching approach and deep understanding of South African plants, climate, and common challenges make garden maintenance accessible to everyone. His emphasis on sustainable practices and working with nature rather than against it has helped countless homeowners and aspiring professionals develop green thumbs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="reviews" class="tab-pane">
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="_images/melissa.jpg" alt="Melissa K.">
+                            <h4>Melissa K.</h4>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p>1 week ago<br>Jabu knows everything about gardens! His practical tips transformed my struggling garden into something I'm proud of. The hands-on training with real tools was excellent</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="_images/Bongani.jpg" alt="Bongani N.">
+                            <h4>Bongani N.</h4>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p>3 weeks ago<br>Started my own garden maintenance business after this course. Jabu taught me professional techniques and gave me the confidence to work with clients. Already have 15 regular customers!</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="_images/karen.jpg" alt="Karen S.">
+                            <h4>Karen S.</h4>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p>1 Months ago<br>Best practical course I've ever taken. Jabu's experience really shows, and he explains everything clearly. My garden has never looked better, and I finally understand what I'm doing</p>
                     </div>
                 </div>
             </div>
@@ -242,6 +301,27 @@
 
         function navigateTo(url) {
             window.location.href = url;
+        }
+
+        // Tab functionality
+        function openTab(tabName, button) {
+            var i;
+            var tabPanes = document.getElementsByClassName("tab-pane");
+            for (i = 0; i < tabPanes.length; i++) {
+                tabPanes[i].style.display = "none";
+            }
+            var tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            button.className += " active";
+        }
+
+        function navigateToCourse(course) {
+            if (course) {
+                window.location.href = course;
+            }
         }
     </script>
 </body>

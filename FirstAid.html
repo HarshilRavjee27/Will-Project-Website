@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Aid & CPR Training - Empowering the Nation</title>
      <link rel="stylesheet" href="css-assets/Style.css">
+    <!-- Shared JS for search/tabs/navigation -->
+    <script src="js-assets/Script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -16,7 +18,7 @@
             <nav class="nav">
                 <a href="HomePage.html">Home</a>
                 <a href="FirstAid.html"class="active">Courses</a>
-                <a href="AboutUs.html">fees</a>
+                <a href="FeeCalculator.html">Fees</a>
                 <a href="AboutUs.html">About Us</a>
                 <a href="ContactUs.html">Contact</a>
             </nav>
@@ -79,7 +81,7 @@
             <!-- Right Side - Enrollment & Image -->
             <div class="course-enrollment">
                 <div class="course-image-container">
-                    <img src="_images/FirstAid.png" alt="First Aid Training" class="course-main-image">
+                    <img src="_images/FirstAidCard.jpg" alt="First Aid Training" class="course-main-image">
                 </div>
 
                 <div class="enrollment-card">
@@ -91,11 +93,75 @@
                     <button class="enroll-button" onclick="window.location.href='FeeCalculator.html'">
                         ENROLL NOW
                     </button>
+                </div>
+            </div>
+        </section>
 
-                    <div class="search-container">
-                        <input type="text" class="search-input" placeholder="Search courses...">
-                        <button class="search-btn">🔍</button>
-                        <button class="help-btn">?</button>
+         <!-- Course Tabs Section -->
+        <section class="course-tabs">
+            <div class="tab-bar">
+                <button class="tab-button" onclick="openTab('overview', this)">Overview</button>
+                <button class="tab-button active" onclick="openTab('instructor', this)">Instructor</button>
+                <button class="tab-button" onclick="openTab('reviews', this)">Reviews</button>
+                <select class="courses-dropdown" onchange="navigateToCourse(this.value)" aria-label="Select Course">
+                    <option value="" selected disabled>Courses ▼</option>
+                    <option value="Sewing.html">Sewing Course</option>
+                    <option value="Landscaping.html">Landscaping Course</option>
+                    <option value="LifeSkills.html">Life Skills Course</option>
+                    <option value="ChildMinding.html">Child Minding Course</option>
+                    <option value="Cooking.html">Cooking Course</option>
+                    <option value="GardenMaintainance.html">Garden Maintenance Course</option>
+                </select>
+            </div>
+
+            <div id="overview" class="tab-pane">
+                <p>Ready to become a confident first responder? This course is perfect for anyone wanting to acquire essential life-saving skills. 
+                    From managing minor injuries to responding to serious medical emergencies, you'll build real confidence in emergency situations through practical, 
+                    hands-on training.Whether you're learning for your family's safety or professional development, 
+                    this course  gives you the skills and certification that could make all the difference when seconds count.</p>
+            </div>
+
+            <div id="instructor" class="tab-pane active">
+                <div class="instructor-info">
+                    <img src="_images/DrThaboMthembu.jpg" alt="Dr. Thabo Mthembu">
+                    <div>
+                        <h3>Dr. Thabo Mthembu</h3>
+                        <p>A qualified paramedic and first aid trainer with over 12 years of emergency response experience, 
+                            Thabo is dedicated to empowering communities with life-saving skills. 
+                            Trained through the South African Emergency Medical Services and certified by multiple international first aid organizations, 
+                            he has a natural ability to make complex medical procedures feel accessible and manageable. 
+                            His patient, encouraging teaching style and real-world experience have helped thousands across South Africa gain the confidence to act in emergencies. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="reviews" class="tab-pane">
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="_images/lindiwe.jpg" alt="Lindiwe N.">
+                            <h4>Lindiwe N.</h4>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                        <p>2 weeks ago<br>Thabo is an exceptional teacher! I came in nervous about doing CPR, and now I feel completely confident I could help someone in an emergency. The hands-on practice made all the difference.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="_images/pieter.jpg" alt="Pieter V.">
+                            <h4> Pieter V.</h4>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p>1 Month ago<br>Best decision ever. Thabo's real-life stories from his paramedic work really brought the training to life. I've already used my choking response skills to help a neighbor. This course is invaluable.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="_images/fatima.jpg" alt="Fatima K.">
+                            <h4>Fatima K.</h4>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                        <p>2 Months ago<br>Comprehensive course that covers everything you need. Thabo creates a supportive environment where you feel comfortable practicing the techniques. Highly recommend for every parent!</p>
                     </div>
                 </div>
             </div>
@@ -246,7 +312,30 @@
         function navigateTo(url) {
             window.location.href = url;
         }
+
+// Tab functionality
+        function openTab(tabName, button) {
+            var i;
+            var tabPanes = document.getElementsByClassName("tab-pane");
+            for (i = 0; i < tabPanes.length; i++) {
+                tabPanes[i].style.display = "none";
+            }
+            var tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            button.className += " active";
+        }
+         function navigateToCourse(url) {
+            if (url) {
+                window.location.href = url;
+            }
+        }
+
     </script>
+
+    
 
 </body>
 </html>

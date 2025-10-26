@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Empowering the Nation</title>
     <link rel="stylesheet" href="css-assets/Style.css">
+    <script src="js-assets/Script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -16,7 +17,7 @@
             <nav class="nav">
                 <a href="HomePage.html">Home</a>
                 <a href="FirstAid.html">Courses</a>
-                <a href="AboutUs.html">fees</a>
+                <a href="FeeCalculator.html">Fees</a>
                 <a href="AboutUs.html">About Us</a>
                 <a href="ContactUs.html"class="active">Contact</a>
             </nav>
@@ -132,16 +133,6 @@
                 </div>
             </section>
         </main>
-
-        <!-- Locations Section -->
-        <section class="locations-section">
-            <h2>Our Locations</h2>
-            <p>Visit us at one of our convenient locations across Johannesburg.</p>
-            <div class="map-placeholder">
-                Interactive Map Placeholder
-            </div>
-        </section>
-
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-links">
@@ -157,183 +148,6 @@
         </footer>
     </div>
 
-    <script>
-        // Simple tooltip functionality
-        function showTooltip(tooltipId, event) {
-            const tooltip = document.getElementById(tooltipId);
-            tooltip.style.display = 'block';
-            tooltip.style.left = event.pageX + 10 + 'px';
-            tooltip.style.top = event.pageY - 10 + 'px';
-        }
-
-        function hideTooltip(tooltipId) {
-            document.getElementById(tooltipId).style.display = 'none';
-        }
-
-        // Map functionality
-        function openMaps(location) {
-            const addresses = {
-                'rosebank': 'Rosebank Towers, 15 Biermann Ave, Rosebank, Johannesburg, 2196',
-                'sandton': '150 Rivonia Rd, Sandton, Johannesburg, 2196',
-                'soweto': 'University of Johannesburg, Soweto Campus, Chris Hani Rd, Soweto, 1804'
-            };
-            
-            const address = encodeURIComponent(addresses[location]);
-            window.open(`https://www.google.com/maps/search/${address}`, '_blank');
-        }
-
-        // Add event listeners
-        document.addEventListener('DOMContentLoaded', function() {
-            // Search icon tooltip
-            const searchIcon = document.querySelector('.search-icon');
-            searchIcon.addEventListener('mouseenter', (e) => showTooltip('searchTooltip', e));
-            searchIcon.addEventListener('mouseleave', () => hideTooltip('searchTooltip'));
-
-            // Contact section tooltip
-            const contactSection = document.querySelector('.contact-info-section');
-            contactSection.addEventListener('mouseenter', (e) => showTooltip('contactTooltip', e));
-            contactSection.addEventListener('mouseleave', () => hideTooltip('contactTooltip'));
-
-            // Map button tooltip
-            const mapButton = document.querySelector('.map-button');
-            if (mapButton) {
-                mapButton.addEventListener('mouseenter', (e) => showTooltip('mapTooltip', e));
-                mapButton.addEventListener('mouseleave', () => hideTooltip('mapTooltip'));
-            }
-        });
-    </script>
-
- <script>
-        // Search data mapping keywords to pages
-        const searchData = [
-            {
-                title: "Home Page",
-                url: "HomePage.html",
-                keywords: ["home", "homepage", "main", "start", "landing", "empowering", "nation", "skills", "learn"],
-                description: "Main landing page with course overview"
-            },
-            {
-                title: "Courses & Fee",
-                url: "FeeCalculator.html",
-                keywords: ["courses", "fees", "calculator", "pricing", "cost", "payment", "enroll", "register", "fee", "price"],
-                description: "View all courses and calculate fees"
-            },
-            {
-                title: "About Us",
-                url: "AboutUs.html",
-                keywords: ["about", "mission", "team", "who", "vision", "story", "company", "organization"],
-                description: "Learn more about our mission and team"
-            },
-            {
-                title: "Contact Us",
-                url: "ContactUs.html",
-                keywords: ["contact", "email", "phone", "address", "location", "reach", "get in touch", "message"],
-                description: "Get in touch with us"
-            },
-            {
-                title: "First Aid Course",
-                url: "FirstAid.html",
-                keywords: ["first aid", "medical", "emergency", "cpr", "life support", "health", "safety"],
-                description: "6-month course - First aid awareness and basic life support"
-            },
-            {
-                title: "Sewing Course",
-                url: "Sewing.html",
-                keywords: ["sewing", "tailoring", "alterations", "garments", "clothes", "fashion", "textiles"],
-                description: "6-month course - Alterations and new garment tailoring"
-            },
-            {
-                title: "Life Skills Course",
-                url: "LifeSkills.html",
-                keywords: ["life skills", "personal development", "essential skills", "basic necessities"],
-                description: "6-month course - Skills for basic life necessities"
-            },
-            {
-                title: "Landscaping Course",
-                url: "LandScaping.html",
-                keywords: ["landscaping", "garden design", "outdoor", "gardens", "plants", "landscape"],
-                description: "6-month course - Landscaping services for gardens"
-            },
-            {
-                title: "Child Minding Course",
-                url: "ChildMinding.html",
-                keywords: ["child minding", "childcare", "baby care", "children", "kids", "nanny", "babysitting"],
-                description: "6-week course - Basic child and baby care"
-            },
-            {
-                title: "Cooking Course",
-                url: "Cooking.html",
-                keywords: ["cooking", "food", "meals", "nutrition", "chef", "culinary", "kitchen"],
-                description: "6-week course - Prepare and cook nutritious family meals"
-            },
-            {
-                title: "Garden Maintenance Course",
-                url: "GardenMaintainance.html",
-                keywords: ["garden maintenance", "gardening", "plants", "lawn", "outdoor maintenance"],
-                description: "6-week course - Basic gardening knowledge"
-            }
-        ];
-
-        function openSearch() {
-            document.getElementById('searchModal').classList.add('active');
-            document.getElementById('searchInput').focus();
-        }
-
-        function closeSearch() {
-            document.getElementById('searchModal').classList.remove('active');
-            document.getElementById('searchInput').value = '';
-            document.getElementById('searchResults').innerHTML = '<div class="no-results">Start typing to search...</div>';
-        }
-
-        // Close modal when clicking outside
-        document.getElementById('searchModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeSearch();
-            }
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeSearch();
-            }
-        });
-
-        // Search functionality
-        document.getElementById('searchInput').addEventListener('input', function(e) {
-            const query = e.target.value.toLowerCase().trim();
-            const resultsContainer = document.getElementById('searchResults');
-
-            if (query.length === 0) {
-                resultsContainer.innerHTML = '<div class="no-results">Start typing to search...</div>';
-                return;
-            }
-
-            // Filter search data
-            const results = searchData.filter(item => {
-                return item.keywords.some(keyword => keyword.includes(query)) ||
-                       item.title.toLowerCase().includes(query) ||
-                       item.description.toLowerCase().includes(query);
-            });
-
-            if (results.length === 0) {
-                resultsContainer.innerHTML = '<div class="no-results">No results found. Try different keywords.</div>';
-                return;
-            }
-
-            // Display results
-            resultsContainer.innerHTML = results.map(item => `
-                <div class="search-result-item" onclick="navigateTo('${item.url}')">
-                    <div class="result-title">${item.title}</div>
-                    <div class="result-description">${item.description}</div>
-                </div>
-            `).join('');
-        });
-
-        function navigateTo(url) {
-            window.location.href = url;
-        }
-    </script>
-
+    <!-- Removed inline search script; now in Script.js -->
 </body>
 </html>

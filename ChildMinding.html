@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Child Minding - Empowering the Nation</title>
      <link rel="stylesheet" href="css-assets/Style.css">
+    <script src="js-assets/Script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -15,7 +16,8 @@
             </div>
             <nav class="nav">
                 <a href="HomePage.html">Home</a>
-                <a href="FeeCalculator.html">Courses</a>
+                <a href="FirstAid.html"class="active">Courses</a>
+                <a href="FeeCalculator.html">Fees</a>
                 <a href="AboutUs.html">About Us</a>
                 <a href="ContactUs.html">Contact</a>
             </nav>
@@ -76,7 +78,7 @@
             <!-- Right Side - Enrollment & Image -->
             <div class="course-enrollment">
                 <div class="course-image-container">
-                    <img src="_images/ChildMinding.png" alt="Child Minding" class="course-main-image">
+                    <img src="_images/ChildMindingCard.jpg" alt="Child Minding" class="course-main-image">
                 </div>
 
                 <div class="enrollment-card">
@@ -88,11 +90,68 @@
                     <button class="enroll-button" onclick="window.location.href='FeeCalculator.html'">
                         ENROLL NOW
                     </button>
+                </div>
+            </div>
+        </section>
 
-                    <div class="search-container">
-                        <input type="text" class="search-input" placeholder="Search courses...">
-                        <button class="search-btn">🔍</button>
-                        <button class="help-btn">?</button>
+        <!-- Course Tabs Section -->
+        <section class="course-tabs">
+            <div class="tab-bar">
+                <button class="tab-button" onclick="openTab('overview', this)">Overview</button>
+                <button class="tab-button active" onclick="openTab('instructor', this)">Instructor</button>
+                <button class="tab-button" onclick="openTab('reviews', this)">Reviews</button>
+                <select class="courses-dropdown" onchange="navigateToCourse(this.value)" aria-label="Select Course">
+                    <option value="" selected disabled>Courses ▼</option>
+                    <option value="FirstAid.html">First Aid Course</option>
+                    <option value="Sewing.html">Sewing Course</option>
+                    <option value="Landscaping.html">Landscaping Course</option>
+                    <option value="LifeSkills.html">Life Skills Course</option> 
+                    <option value="Cooking.html">Cooking Course</option>
+                    <option value="GardenMaintainance.html">Garden Maintenance Course</option>
+                </select>
+            </div>
+
+            <div id="overview" class="tab-pane">
+                <p>Ready to nurture the next generation with confidence? This course is perfect for anyone passionate about working with children and providing safe, enriching care. From understanding developmental milestones to handling emergencies, you'll build real expertise through practical training and scenarios. Whether you're starting a childcare career or enhancing your existing skills, this course  gives you professional knowledge and certification that parents trust and children benefit from.</p>
+            </div>
+
+            <div id="instructor" class="tab-pane active">
+                <div class="instructor-info">
+                    <img src="_images/grace.jpg" alt="Grace Naidoo">
+                    <div>
+                        <h3>Grace Naidoo</h3>
+                        <p>A qualified early childhood development practitioner and child minding specialist with over 16 years of experience nurturing young minds, Grace brings warmth, professionalism, and extensive knowledge to her training. With qualifications in Early Childhood Development and certificates in Pediatric First Aid, she has worked in crèches, after-school programs, and as a private child minding consultant. Her gentle, nurturing teaching approach and practical wisdom help students feel confident caring for children of all ages. Her emphasis on safety, developmental appropriateness, and building positive relationships with both children and parents has made her training highly sought after.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="reviews" class="tab-pane">
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="_images/thandiwe.jpg" alt="Thandiwe M.">
+                            <h4>Thandiwe M.</h4>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p>2 weeks ago<br>Grace is a natural teacher with so much wisdom about children. The course gave me confidence to start my own child minding business, and parents trust me because of the professional training.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="_images/daniel.jpg" alt="Daniel F.">
+                            <h4>Daniel F.</h4>
+                            <span class="stars">★★★★☆</span>
+                        </div>
+                        <p>1 Month ago<br>As a dad wanting to be more involved in childcare, this course was perfect. Grace made everything so practical and relevant. The first aid section alone was invaluable.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="_images/lerato.jpg" alt="Lerato S.">
+                            <h4>Lerato S.</h4>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p>2 Months ago<br>Best child minding course available! Grace covers everything from safety to activities to communication with parents. I feel so much more professional and prepared now.</p>
                     </div>
                 </div>
             </div>
@@ -242,6 +301,26 @@
 
         function navigateTo(url) {
             window.location.href = url;
+        }
+
+         // Tab functionality
+        function openTab(tabName, button) {
+            var i;
+            var tabPanes = document.getElementsByClassName("tab-pane");
+            for (i = 0; i < tabPanes.length; i++) {
+                tabPanes[i].style.display = "none";
+            }
+            var tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            button.className += " active";
+        }
+         function navigateToCourse(url) {
+            if (url) {
+                window.location.href = url;
+            }
         }
     </script>
 </body>

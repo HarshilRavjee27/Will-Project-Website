@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life Skills- Empowering the Nation</title>
      <link rel="stylesheet" href="css-assets/Style.css">
+    <script src="js-assets/Script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -15,7 +16,8 @@
             </div>
             <nav class="nav">
                 <a href="HomePage.html">Home</a>
-                <a href="FeeCalculator.html">Courses</a>
+                <a href="FirstAid.html"class="active">Courses</a>
+                <a href="FeeCalculator.html">Fees</a>
                 <a href="AboutUs.html">About Us</a>
                 <a href="ContactUs.html">Contact</a>
             </nav>
@@ -79,7 +81,7 @@
             <!-- Right Side - Enrollment & Image -->
             <div class="course-enrollment">
                 <div class="course-image-container">
-                    <img src="_images/LifeSkills.png" alt="Life Skills" class="course-main-image">
+                    <img src="_images/LifeSkillsCard.jpg" alt="Life Skills" class="course-main-image">
                 </div>
 
                 <div class="enrollment-card">
@@ -91,11 +93,68 @@
                     <button class="enroll-button" onclick="window.location.href='FeeCalculator.html'">
                         ENROLL NOW
                     </button>
+                </div>
+            </div>
+        </section>
 
-                    <div class="search-container">
-                        <input type="text" class="search-input" placeholder="Search courses...">
-                        <button class="search-btn">🔍</button>
-                        <button class="help-btn">?</button>
+        <!-- Course Tabs Section -->
+        <section class="course-tabs">
+            <div class="tab-bar">
+                <button class="tab-button" onclick="openTab('overview', this)">Overview</button>
+                <button class="tab-button active" onclick="openTab('instructor', this)">Instructor</button>
+                <button class="tab-button" onclick="openTab('reviews', this)">Reviews</button>
+                <select class="courses-dropdown" onchange="navigateToCourse(this.value)" aria-label="Select Course">
+                    <option value="" selected disabled>Courses ▼</option>
+                    <option value="FirstAid.html">First Aid Course</option>
+                    <option value="Sewing.html">Sewing Course</option>
+                    <option value="Landscaping.html">Landscaping Course</option>
+                    <option value="ChildMinding.html">Child Minding Course</option>
+                    <option value="Cooking.html">Cooking Course</option>
+                    <option value="GardenMaintainance.html">Garden Maintenance Course</option>
+                </select>
+            </div>
+
+            <div id="overview" class="tab-pane">
+                <p>Ready to thread your way to creativity? This course is perfect for anyone wanting to develop practical sewing skills or explore their creative side. From mending torn clothing to creating your own designs, you'll build real confidence with needle and thread in a supportive, encouraging environment. Whether you're starting from scratch or looking to refine existing skills, this course  gives you the techniques and creative confidence to turn fabric into something beautiful.</p>
+            </div>
+
+            <div id="instructor" class="tab-pane active">
+                <div class="instructor-info">
+                    <img src="_images/naledi.jpg" alt="Naledi Khumalo">
+                    <div>
+                        <h3>Naledi Khumalo</h3>
+                        <p>A dedicated life skills facilitator and career counselor with over 14 years of experience empowering youth and adults across South Africa, Naledi has a genuine passion for helping people reach their potential. With qualifications in Adult Education and Development and extensive training in counseling and facilitation, she has worked with community organizations, schools, and corporate training programs. Her warm, relatable teaching style and practical approach make personal development feel achievable and relevant. Her sessions are known for being interactive, supportive, and filled with real-world applications.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="reviews" class="tab-pane">
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="_images/sipho.jpg" alt="Sipho D.">
+                            <h4>Sipho D.</h4>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p>1 week ago<br>Naledi changed my life! The interview techniques and CV writing skills landed me my dream job within weeks of finishing the course. She genuinely cares about your success.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="_images/chloe.jpg" alt="Chloe B.">
+                            <h4>Chloe B.</h4>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p>2 weeks ago<br>This course should be mandatory for everyone! The budgeting and financial planning modules alone were worth every cent. Naledi makes everything so practical and easy to apply immediately.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="_images/ahmed.jpg" alt="Ahmed M.">
+                            <h4>Ahmed M.</h4>
+                            <span class="stars">★★★★★</span>
+                        </div>
+                        <p>1 Months ago<br>Naledi's teaching style is incredible - supportive, engaging, and full of wisdom. The communication skills have helped me both at work and in my personal relationships. Thank you!</p>
                     </div>
                 </div>
             </div>
@@ -245,6 +304,26 @@
 
         function navigateTo(url) {
             window.location.href = url;
+        }
+
+         // Tab functionality
+        function openTab(tabName, button) {
+            var i;
+            var tabPanes = document.getElementsByClassName("tab-pane");
+            for (i = 0; i < tabPanes.length; i++) {
+                tabPanes[i].style.display = "none";
+            }
+            var tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            button.className += " active";
+        }
+         function navigateToCourse(url) {
+            if (url) {
+                window.location.href = url;
+            }
         }
     </script>
 </body>
