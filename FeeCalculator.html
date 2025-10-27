@@ -1,21 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Code Attribution
+        Title: HTML meta tag
+        Author: W3Schools
+        Date: 27 October 2025
+        Version: Not specified
+        Availability: https://www.w3schools.com/tags/tag_meta.asp
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Code Attribution
+        Title: HTML title tag
+        Author: W3Schools
+        Date: 27 October 2025
+        Version: Not specified
+        Availability: https://www.w3schools.com/tags/tag_title.asp
+    -->
     <title>Fee Calculator - Empowering the Nation</title>
+    
+    <!-- Code Attribution
+        Title: HTML link tag
+        Author: W3Schools
+        Date: 27 October 2025
+        Version: Not specified
+        Availability: https://www.w3schools.com/tags/tag_link.asp
+    -->
     <link rel="stylesheet" href="css-assets/Style.css">
+    
+    <!-- Code Attribution
+        Title: HTML script tag
+        Author: W3Schools
+        Date: 27 October 2025
+        Version: Not specified
+        Availability: https://www.w3schools.com/tags/tag_script.asp
+    -->
     <!-- Loads shared JS (search, tabs, fee flow, etc.) once for the whole site -->
     <script src="js-assets/Script.js" defer></script>
 </head>
 <body>
+    <!-- Code Attribution
+        Title: HTML div tag
+        Author: W3Schools
+        Date: 27 October 2025
+        Version: Not specified
+        Availability: https://www.w3schools.com/tags/tag_div.asp
+    -->
     <div class="container">
+        <!-- Code Attribution
+            Title: HTML header tag
+            Author: W3Schools
+            Date: 27 October 2025
+            Version: Not specified
+            Availability: https://www.w3schools.com/tags/tag_header.asp
+        -->
         <!-- Header -->
         <header class="header">
             <div class="logo">
+                <!-- Code Attribution
+                    Title: HTML img tag
+                    Author: W3Schools
+                    Date: 27 October 2025
+                    Version: Not specified
+                    Availability: https://www.w3schools.com/tags/tag_img.asp
+                -->
                 <img src="_images/Logo2.png" alt="Skills Training Center Logo" class="logo-img">
             </div>
+            
+            <!-- Code Attribution
+                Title: HTML nav tag
+                Author: W3Schools
+                Date: 27 October 2025
+                Version: Not specified
+                Availability: https://www.w3schools.com/tags/tag_nav.asp
+            -->
             <nav class="nav">
+                <!-- Code Attribution
+                    Title: HTML a tag
+                    Author: W3Schools
+                    Date: 27 October 2025
+                    Version: Not specified
+                    Availability: https://www.w3schools.com/tags/tag_a.asp
+                -->
                 <a href="HomePage.html">Home</a>
                 <a href="FirstAid.html">Courses</a>
                 <a href="FeeCalculator.html" class="active">Fees</a>
@@ -32,10 +99,32 @@
         <div class="search-modal" id="searchModal">
             <div class="search-container">
                 <div class="search-header">
+                    <!-- Code Attribution
+                        Title: HTML h1 to h6 tags
+                        Author: W3Schools
+                        Date: 27 October 2025
+                        Version: Not specified
+                        Availability: https://www.w3schools.com/tags/tag_hn.asp
+                    -->
                     <h3>Search</h3>
+                    
+                    <!-- Code Attribution
+                        Title: HTML button tag
+                        Author: W3Schools
+                        Date: 27 October 2025
+                        Version: Not specified
+                        Availability: https://www.w3schools.com/tags/tag_button.asp
+                    -->
                     <button class="close-search" onclick="closeSearch()">×</button>
                 </div>
                 <div class="search-input-wrapper">
+                    <!-- Code Attribution
+                        Title: HTML input tag
+                        Author: W3Schools
+                        Date: 27 October 2025
+                        Version: Not specified
+                        Availability: https://www.w3schools.com/tags/tag_input.asp
+                    -->
                     <input 
                         type="text" 
                         class="search-input" 
@@ -50,9 +139,24 @@
             </div>
         </div>
 
+        <!-- Code Attribution
+            Title: HTML section tag
+            Author: W3Schools
+            Date: 27 October 2025
+            Version: Not specified
+            Availability: https://www.w3schools.com/tags/tag_section.asp
+        -->
         <!-- Enroll Section -->
         <section class="enroll-section-new">
             <h1>Enroll in Your Dream Course</h1>
+            
+            <!-- Code Attribution
+                Title: HTML p tag
+                Author: W3Schools
+                Date: 27 October 2025
+                Version: Not specified
+                Availability: https://www.w3schools.com/tags/tag_p.asp
+            -->
             <p>Take the first step towards a brighter future with Empowering the Nation.</p>
             <div class="progress-bar-new">
                 <div class="progress-step active">
@@ -74,9 +178,24 @@
             <div class="form-container">
                 <h2>Contact Details</h2>
                 <p class="form-subtitle">Please provide your basic contact information.</p>
+                
+                <!-- Code Attribution
+                    Title: HTML form tag
+                    Author: W3Schools
+                    Date: 27 October 2025
+                    Version: Not specified
+                    Availability: https://www.w3schools.com/tags/tag_form.asp
+                -->
                 <form id="contactForm">
                     <div class="form-row-new">
                         <div class="form-group-new">
+                            <!-- Code Attribution
+                                Title: HTML label tag
+                                Author: W3Schools
+                                Date: 27 October 2025
+                                Version: Not specified
+                                Availability: https://www.w3schools.com/tags/tag_label.asp
+                            -->
                             <label for="firstName">First Name</label>
                             <input id="firstName" type="text" placeholder="John" required>
                         </div>
@@ -95,6 +214,14 @@
                     </div>
                     <div class="form-group-new">
                         <label for="specialReq">Special Requirements (Optional)</label>
+                        
+                        <!-- Code Attribution
+                            Title: HTML textarea tag
+                            Author: W3Schools
+                            Date: 27 October 2025
+                            Version: Not specified
+                            Availability: https://www.w3schools.com/tags/tag_textarea.asp
+                        -->
                         <textarea id="specialReq" placeholder="Any special requirements or dietary needs?" rows="4"></textarea>
                     </div>
                     <button type="button" class="next-step-new" id="toCoursesBtn">Next Step</button>
@@ -110,6 +237,13 @@
                     <input type="checkbox" name="course" value="1500">
                     <div class="course-card-content">
                         <div class="course-card-left">
+                            <!-- Code Attribution
+                                Title: HTML span tag
+                                Author: W3Schools
+                                Date: 27 October 2025
+                                Version: Not specified
+                                Availability: https://www.w3schools.com/tags/tag_span.asp
+                            -->
                             <span class="course-name-new">First Aid</span>
                             <span class="course-duration-new">6 months</span>
                         </div>
@@ -222,6 +356,13 @@
         </section>
     </div>
 
+    <!-- Code Attribution
+        Title: HTML footer tag
+        Author: W3Schools
+        Date: 27 October 2025
+        Version: Not specified
+        Availability: https://www.w3schools.com/tags/tag_footer.asp
+    -->
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-links">

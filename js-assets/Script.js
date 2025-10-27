@@ -1,74 +1,307 @@
-/* Global site script:
-   - Provides search modal, tabs, and navigation across pages.
-   - Powers Fee Calculator (cost calc + gated 3-step flow).
-   - Handles Sign Up save/return.
-   - Plays success confetti on the success page.
+/* ========================================
+   EMPOWERING THE NATION - MAIN SCRIPT
+   ========================================
+   This script handles:
+   1. Search functionality across all pages
+   2. Course detail page tabs
+   3. Sign up form validation and storage
+   4. Fee calculator with 3-step enrollment flow
+   5. Success page confetti animation
 */
 
-/* ---------- Utilities ---------- */
-// Small helper to safely select elements
-const $ = (sel, ctx = document) => ctx.querySelector(sel);
-const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
-const isEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+/* ========================================
+   HELPER FUNCTIONS
+   ======================================== */
 
-/* ---------- Search Modal (runs only if elements exist) ---------- */
-// One-liner: provides modal open/close and live results filtering from shared searchData.
-(function initSearch() {
+/* Code Attribution
+   Title: JavaScript querySelector
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/met_document_queryselector.asp
+*/
+// Quick element selector - returns single element
+function $(selector) {
+    return document.querySelector(selector);
+}
+
+/* Code Attribution
+   Title: JavaScript querySelectorAll
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/met_document_queryselectorall.asp
+*/
+/* Code Attribution
+   Title: JavaScript Array.from
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/jsref_from.asp
+*/
+// Quick element selector - returns array of elements
+function $$(selector) {
+    return Array.from(document.querySelectorAll(selector));
+}
+
+/* Code Attribution
+   Title: JavaScript Regular Expressions
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/js/js_regexp.asp
+*/
+/* Code Attribution
+   Title: JavaScript test() Method
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/jsref_regexp_test.asp
+*/
+// Validate email format
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+/* ========================================
+   1. SEARCH MODAL FUNCTIONALITY
+   ======================================== */
+
+/* Code Attribution
+   Title: JavaScript const
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/js/js_const.asp
+*/
+/* Code Attribution
+   Title: JavaScript Arrays
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/js/js_arrays.asp
+*/
+/* Code Attribution
+   Title: JavaScript Objects
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/js/js_objects.asp
+*/
+// Search data for all pages and courses
+const searchData = [
+    { title: 'Home Page', url: 'HomePage.html', keywords: ['home', 'homepage', 'main', 'start'], description: 'Main landing page with course overview' },
+    { title: 'Courses & Fee', url: 'FeeCalculator.html', keywords: ['courses', 'fees', 'calculator', 'pricing'], description: 'View all courses and calculate fees' },
+    { title: 'About Us', url: 'AboutUs.html', keywords: ['about', 'mission', 'team', 'story'], description: 'Learn more about our mission and team' },
+    { title: 'Contact Us', url: 'ContactUs.html', keywords: ['contact', 'email', 'phone', 'address'], description: 'Get in touch with us' },
+    { title: 'First Aid Course', url: 'FirstAid.html', keywords: ['first aid', 'medical', 'emergency', 'cpr'], description: '6-month course - First aid awareness' },
+    { title: 'Sewing Course', url: 'Sewing.html', keywords: ['sewing', 'tailoring', 'alterations', 'garments'], description: '6-month course - Garment tailoring' },
+    { title: 'Life Skills Course', url: 'LifeSkills.html', keywords: ['life skills', 'personal development', 'essential skills'], description: '6-month course - Essential life skills' },
+    { title: 'Landscaping Course', url: 'LandScaping.html', keywords: ['landscaping', 'garden design', 'outdoor'], description: '6-month course - Landscaping services' },
+    { title: 'Child Minding Course', url: 'ChildMinding.html', keywords: ['child minding', 'childcare', 'baby care'], description: '6-week course - Child and baby care' },
+    { title: 'Cooking Course', url: 'Cooking.html', keywords: ['cooking', 'food', 'meals', 'nutrition'], description: '6-week course - Nutritious family meals' },
+    { title: 'Garden Maintenance', url: 'GardenMaintainance.html', keywords: ['garden maintenance', 'gardening', 'plants'], description: '6-week course - Basic gardening' }
+];
+
+/* Code Attribution
+   Title: JavaScript Functions
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/js/js_functions.asp
+*/
+/* Code Attribution
+   Title: JavaScript if...else Statement
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/js/js_if_else.asp
+*/
+/* Code Attribution
+   Title: JavaScript return Statement
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/jsref_return.asp
+*/
+// Open search modal
+function openSearch() {
+    const modal = $('#searchModal');
+    const input = $('#searchInput');
+    if (!modal) return;
+    
+    /* Code Attribution
+       Title: JavaScript classList
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/jsref/prop_element_classlist.asp
+    */
+    modal.classList.add('active');
+    
+    /* Code Attribution
+       Title: JavaScript setTimeout
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/jsref/met_win_settimeout.asp
+    */
+    /* Code Attribution
+       Title: JavaScript focus() Method
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/jsref/met_html_focus.asp
+    */
+    // Focus on input after a short delay
+    setTimeout(() => input && input.focus(), 100);
+}
+
+// Close search modal
+function closeSearch() {
     const modal = $('#searchModal');
     const input = $('#searchInput');
     const results = $('#searchResults');
+    if (!modal) return;
+    
+    modal.classList.remove('active');
+    if (input) input.value = '';
+    
+    /* Code Attribution
+       Title: JavaScript innerHTML
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/jsref/prop_html_innerhtml.asp
+    */
+    if (results) results.innerHTML = '<div class="no-results">Start typing to search...</div>';
+}
 
-    // Shared search metadata used by all pages
-    const searchData = [
-        { title: 'Home Page', url: 'HomePage.html', keywords: ['home','homepage','main','start','landing','empowering','nation','skills','learn'], description: 'Main landing page with course overview' },
-        { title: 'Courses & Fee', url: 'FeeCalculator.html', keywords: ['courses','fees','calculator','pricing','cost','payment','enroll','register','fee','price'], description: 'View all courses and calculate fees' },
-        { title: 'About Us', url: 'AboutUs.html', keywords: ['about','mission','team','who','vision','story','company','organization'], description: 'Learn more about our mission and team' },
-        { title: 'Contact Us', url: 'ContactUs.html', keywords: ['contact','email','phone','address','location','reach','get in touch','message'], description: 'Get in touch with us' },
-        { title: 'First Aid Course', url: 'FirstAid.html', keywords: ['first aid','medical','emergency','cpr','life support','health','safety'], description: '6-month course - First aid awareness and basic life support' },
-        { title: 'Sewing Course', url: 'Sewing.html', keywords: ['sewing','tailoring','alterations','garments','clothes','fashion','textiles'], description: '6-month course - Alterations and new garment tailoring' },
-        { title: 'Life Skills Course', url: 'LifeSkills.html', keywords: ['life skills','personal development','essential skills','basic necessities'], description: '6-month course - Skills for basic life necessities' },
-        { title: 'Landscaping Course', url: 'LandScaping.html', keywords: ['landscaping','garden design','outdoor','gardens','plants','landscape'], description: '6-month course - Landscaping services for gardens' },
-        { title: 'Child Minding Course', url: 'ChildMinding.html', keywords: ['child minding','childcare','baby care','children','kids','nanny','babysitting'], description: '6-week course - Basic child and baby care' },
-        { title: 'Cooking Course', url: 'Cooking.html', keywords: ['cooking','food','meals','nutrition','chef','culinary','kitchen'], description: '6-week course - Prepare and cook nutritious family meals' },
-        { title: 'Garden Maintenance Course', url: 'GardenMaintainance.html', keywords: ['garden maintenance','gardening','plants','lawn','outdoor maintenance'], description: '6-week course - Basic gardening knowledge' }
-    ];
+/* Code Attribution
+   Title: JavaScript Window Location
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/js/js_window_location.asp
+*/
+// Navigate to a URL
+function navigateTo(url) {
+    window.location.href = url;
+}
 
-    // Expose open/close globally so header buttons can call them
-    window.openSearch = function() {
-        if (!modal) return;
-        modal.classList.add('active');
-        setTimeout(() => input && input.focus(), 10);
-    };
-    window.closeSearch = function() {
-        if (!modal) return;
-        modal.classList.remove('active');
-        if (input) input.value = '';
-        if (results) results.innerHTML = '<div class="no-results">Start typing to search...</div>';
-    };
-    window.navigateTo = function(url) { window.location.href = url; };
-
-    if (!modal || !input || !results) return; // Skip if page has no modal
-
-    // Close modal on backdrop click
-    modal.addEventListener('click', (e) => { if (e.target === modal) window.closeSearch(); });
-    // Close modal with Escape
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') window.closeSearch(); });
-
-    // Live search rendering
-    input.addEventListener('input', (e) => {
-        const q = e.target.value.toLowerCase().trim();
-        if (!q) { results.innerHTML = '<div class="no-results">Start typing to search...</div>'; return; }
-
-        const matches = searchData.filter(item =>
-            item.title.toLowerCase().includes(q) ||
-            item.description.toLowerCase().includes(q) ||
-            item.keywords.some(k => k.includes(q))
-        );
-
-        if (!matches.length) {
+/* Code Attribution
+   Title: JavaScript addEventListener
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/met_document_addeventlistener.asp
+*/
+// Initialize search functionality
+function initSearchModal() {
+    const modal = $('#searchModal');
+    const input = $('#searchInput');
+    const results = $('#searchResults');
+    
+    // Exit if elements don't exist on this page
+    if (!modal || !input || !results) return;
+    
+    // Close modal when clicking outside
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeSearch();
+    });
+    
+    /* Code Attribution
+       Title: JavaScript Keyboard Events
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/jsref/obj_keyboardevent.asp
+    */
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeSearch();
+    });
+    
+    /* Code Attribution
+       Title: JavaScript String toLowerCase
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/jsref/jsref_tolowercase.asp
+    */
+    /* Code Attribution
+       Title: JavaScript String trim
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/jsref/jsref_trim_string.asp
+    */
+    // Live search as user types
+    input.addEventListener('input', function(e) {
+        const query = e.target.value.toLowerCase().trim();
+        
+        // Show default message if input is empty
+        if (!query) {
+            results.innerHTML = '<div class="no-results">Start typing to search...</div>';
+            return;
+        }
+        
+        /* Code Attribution
+           Title: JavaScript Array filter
+           Author: W3Schools
+           Date: 27 October 2025
+           Version: Not specified
+           Availability: https://www.w3schools.com/jsref/jsref_filter.asp
+        */
+        /* Code Attribution
+           Title: JavaScript String includes
+           Author: W3Schools
+           Date: 27 October 2025
+           Version: Not specified
+           Availability: https://www.w3schools.com/jsref/jsref_includes.asp
+        */
+        /* Code Attribution
+           Title: JavaScript Array some
+           Author: W3Schools
+           Date: 27 October 2025
+           Version: Not specified
+           Availability: https://www.w3schools.com/jsref/jsref_some.asp
+        */
+        // Filter search data based on query
+        const matches = searchData.filter(item => {
+            return item.title.toLowerCase().includes(query) ||
+                   item.description.toLowerCase().includes(query) ||
+                   item.keywords.some(keyword => keyword.includes(query));
+        });
+        
+        // Show no results message
+        if (matches.length === 0) {
             results.innerHTML = '<div class="no-results">No results found. Try different keywords.</div>';
             return;
         }
+        
+        /* Code Attribution
+           Title: JavaScript Array map
+           Author: W3Schools
+           Date: 27 October 2025
+           Version: Not specified
+           Availability: https://www.w3schools.com/jsref/jsref_map.asp
+        */
+        /* Code Attribution
+           Title: JavaScript Template Literals
+           Author: W3Schools
+           Date: 27 October 2025
+           Version: Not specified
+           Availability: https://www.w3schools.com/js/js_string_templates.asp
+        */
+        /* Code Attribution
+           Title: JavaScript Array join
+           Author: W3Schools
+           Date: 27 October 2025
+           Version: Not specified
+           Availability: https://www.w3schools.com/jsref/jsref_join.asp
+        */
+        // Display matching results
         results.innerHTML = matches.map(item => `
             <div class="search-result-item" onclick="navigateTo('${item.url}')">
                 <div class="result-title">${item.title}</div>
@@ -76,201 +309,564 @@ const isEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
             </div>
         `).join('');
     });
-})();
+}
 
-/* ---------- Course Tabs (runs only if tab buttons exist) ---------- */
-// One-liner: shows selected tab pane and sets active style on the clicked tab.
-window.openTab = function(tabName, button) {
-    const panes = $$('.tab-pane'); panes.forEach(p => p.style.display = 'none');
-    const buttons = $$('.tab-button'); buttons.forEach(b => b.className = b.className.replace(' active', ''));
-    const pane = document.getElementById(tabName); if (pane) pane.style.display = 'block';
-    if (button) button.className += ' active';
-};
-// One-liner: navigates from the course dropdown to the chosen course page.
-window.navigateToCourse = function(url) { if (url) window.location.href = url; };
+/* ========================================
+   2. COURSE TABS FUNCTIONALITY
+   ======================================== */
 
-/* ---------- Sign Up save + return (only on signup page) ---------- */
-// One-liner: saves account to localStorage and returns to FeeCalculator step 2.
-document.addEventListener('DOMContentLoaded', function () {
+/* Code Attribution
+   Title: JavaScript forEach
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/jsref_foreach.asp
+*/
+/* Code Attribution
+   Title: JavaScript Style Object
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/dom_obj_style.asp
+*/
+// Switch between tabs on course detail pages
+function openTab(tabName, buttonElement) {
+    // Hide all tab content
+    const allPanes = $$('.tab-pane');
+    allPanes.forEach(pane => pane.style.display = 'none');
+    
+    // Remove active class from all buttons
+    const allButtons = $$('.tab-button');
+    allButtons.forEach(button => button.classList.remove('active'));
+    
+    /* Code Attribution
+       Title: JavaScript getElementById
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/jsref/met_document_getelementbyid.asp
+    */
+    // Show selected tab
+    const selectedPane = document.getElementById(tabName);
+    if (selectedPane) selectedPane.style.display = 'block';
+    
+    // Add active class to clicked button
+    if (buttonElement) buttonElement.classList.add('active');
+}
+
+// Navigate to different course from dropdown
+function navigateToCourse(url) {
+    if (url) window.location.href = url;
+}
+
+/* ========================================
+   3. SIGN UP FORM FUNCTIONALITY
+   ======================================== */
+
+/* Code Attribution
+   Title: JavaScript preventDefault
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/event_preventdefault.asp
+*/
+// Initialize sign up form
+function initSignUpForm() {
     const form = $('.signup-form');
-    if (!form) return;
-
-    const get = (id) => document.getElementById(id);
-    const val = (id) => (get(id)?.value || '').trim();
-
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const first = val('firstName');
-        const last = val('lastName');
-        const fullName = val('fullName') || [first, last].filter(Boolean).join(' ').trim();
-        const email = val('email');
-        const phone = val('phone');
-        const password = val('password');
-        const confirm = val('confirm') || val('confirmPassword');
-
-        if (!fullName || !email || !password || !confirm) { showMsg('Please complete all required fields.', true); return; }
-        if (!isEmail(email)) { showMsg('Please enter a valid email.', true); return; }
-        if ((phone && phone.replace(/\D/g,'').length > 0) && phone.replace(/\D/g,'').length < 10) { showMsg('Please enter a valid phone number.', true); return; }
-        if (password.length < 8 || !/[A-Za-z]/.test(password) || !/\d/.test(password)) { showMsg('Password must be at least 8 characters with letters and numbers.', true); return; }
-        if (password !== confirm) { showMsg('Passwords do not match.', true); return; }
-
-        localStorage.setItem('userData', JSON.stringify({ fullName, email, phone, password }));
+    if (!form) return; // Exit if not on sign up page
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent default form submission
+        
+        // Get form values
+        const firstName = $('#firstName')?.value.trim() || '';
+        const lastName = $('#lastName')?.value.trim() || '';
+        const fullName = $('#fullName')?.value.trim() || `${firstName} ${lastName}`.trim();
+        const email = $('#email')?.value.trim() || '';
+        const phone = $('#phone')?.value.trim() || '';
+        const password = $('#password')?.value || '';
+        const confirmPassword = $('#confirm')?.value || $('#confirmPassword')?.value || '';
+        
+        // Validation checks
+        if (!fullName || !email || !password || !confirmPassword) {
+            showMessage('Please complete all required fields.', true);
+            return;
+        }
+        
+        if (!isValidEmail(email)) {
+            showMessage('Please enter a valid email.', true);
+            return;
+        }
+        
+        /* Code Attribution
+           Title: JavaScript String replace
+           Author: W3Schools
+           Date: 27 October 2025
+           Version: Not specified
+           Availability: https://www.w3schools.com/jsref/jsref_replace.asp
+        */
+        if (phone && phone.replace(/\D/g, '').length < 10) {
+            showMessage('Please enter a valid phone number.', true);
+            return;
+        }
+        
+        if (password.length < 8) {
+            showMessage('Password must be at least 8 characters.', true);
+            return;
+        }
+        
+        if (!/[A-Za-z]/.test(password) || !/\d/.test(password)) {
+            showMessage('Password must contain letters and numbers.', true);
+            return;
+        }
+        
+        if (password !== confirmPassword) {
+            showMessage('Passwords do not match.', true);
+            return;
+        }
+        
+        /* Code Attribution
+           Title: JavaScript JSON stringify
+           Author: W3Schools
+           Date: 27 October 2025
+           Version: Not specified
+           Availability: https://www.w3schools.com/js/js_json_stringify.asp
+        */
+        /* Code Attribution
+           Title: JavaScript localStorage
+           Author: W3Schools
+           Date: 27 October 2025
+           Version: Not specified
+           Availability: https://www.w3schools.com/jsref/prop_win_localstorage.asp
+        */
+        // Save user data to localStorage
+        const userData = { fullName, email, phone, password };
+        localStorage.setItem('userData', JSON.stringify(userData));
         localStorage.setItem('signup_complete', '1');
-
-        showMsg('Account created successfully!');
-        const from = new URLSearchParams(window.location.search).get('from') || 'fee';
+        
+        showMessage('Account created successfully!', false);
+        
+        /* Code Attribution
+           Title: JavaScript URLSearchParams
+           Author: W3Schools
+           Date: 27 October 2025
+           Version: Not specified
+           Availability: https://www.w3schools.com/js/js_api_url.asp
+        */
+        // Redirect after success
+        const params = new URLSearchParams(window.location.search);
+        const returnTo = params.get('from') || 'home';
+        
         setTimeout(() => {
-            if (from === 'fee') window.location.href = 'FeeCalculator.html#step2';
-            else window.location.href = 'HomePage.html';
+            if (returnTo === 'fee') {
+                window.location.href = 'FeeCalculator.html#step2';
+            } else {
+                window.location.href = 'HomePage.html';
+            }
         }, 800);
     });
-
-    function showMsg(message, isError = false) {
-        const className = isError ? 'error-message' : 'success-message';
-        const prev = form.querySelector('.error-message, .success-message'); if (prev) prev.remove();
-        const div = document.createElement('div'); div.className = className; div.textContent = message;
-        form.prepend(div); if (isError) setTimeout(() => div.remove(), 3000);
+    
+    /* Code Attribution
+       Title: JavaScript createElement
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/jsref/met_document_createelement.asp
+    */
+    /* Code Attribution
+       Title: JavaScript textContent
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/jsref/prop_node_textcontent.asp
+    */
+    /* Code Attribution
+       Title: JavaScript prepend
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/jsref/met_node_prepend.asp
+    */
+    /* Code Attribution
+       Title: JavaScript remove
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/jsref/met_element_remove.asp
+    */
+    // Show success or error message
+    function showMessage(text, isError) {
+        const messageClass = isError ? 'error-message' : 'success-message';
+        
+        // Remove any existing messages
+        const existingMessage = form.querySelector('.error-message, .success-message');
+        if (existingMessage) existingMessage.remove();
+        
+        // Create and show new message
+        const messageDiv = document.createElement('div');
+        messageDiv.className = messageClass;
+        messageDiv.textContent = text;
+        form.prepend(messageDiv);
+        
+        // Auto-remove error messages after 3 seconds
+        if (isError) {
+            setTimeout(() => messageDiv.remove(), 3000);
+        }
     }
-});
+}
 
-/* ---------- Fee Calculator (cost + gated 3-step flow) ---------- */
-// One-liner: updates cost, validates steps, and enables Enroll only after steps 1–3 are done.
-document.addEventListener('DOMContentLoaded', function () {
-    const isFeePage = !!document.getElementById('contactStep');
-    if (!isFeePage) return;
+/* ========================================
+   4. FEE CALCULATOR FUNCTIONALITY
+   ======================================== */
 
-    // Cost summary
-    const courseInputs = $$('input[name="course"]');
-    const subtotalEl = $('.cost-summary-new .subtotal');
-    const discountEl = $('.cost-summary-new .discount');
-    const vatEl = $('.cost-summary-new .vat');
-    const totalEl = $('.cost-summary-new .total-amount');
-
-    function updateCost() {
-        const selected = courseInputs.filter(cb => cb.checked).map(cb => parseFloat(cb.value));
-        const subTotal = selected.reduce((a,b) => a+b, 0);
-        const bundleDiscount = selected.length >= 2 ? subTotal * 0.1 : 0;
-        const vatAmount = (subTotal - bundleDiscount) * 0.15;
-        const finalTotal = subTotal - bundleDiscount + vatAmount;
-
-        if (subtotalEl) subtotalEl.textContent = `R${subTotal.toFixed(2)}`;
-        if (discountEl) discountEl.textContent = `-R${bundleDiscount.toFixed(2)}`;
-        if (vatEl) vatEl.textContent = `R${vatAmount.toFixed(2)}`;
-        if (totalEl) totalEl.textContent = `R${finalTotal.toFixed(2)}`;
-    }
-    courseInputs.forEach(cb => cb.addEventListener('change', updateCost));
-
-    // Step flow
+/* Code Attribution
+   Title: JavaScript parseFloat
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/jsref_parsefloat.asp
+*/
+/* Code Attribution
+   Title: JavaScript Array reduce
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/jsref_reduce.asp
+*/
+/* Code Attribution
+   Title: JavaScript toFixed
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/jsref_tofixed.asp
+*/
+// Initialize fee calculator and enrollment flow
+function initFeeCalculator() {
     const contactStep = $('#contactStep');
+    if (!contactStep) return; // Exit if not on fee calculator page
+    
+    // Get all elements
+    const courseCheckboxes = $$('input[name="course"]');
+    const subtotalElement = $('.cost-summary-new .subtotal');
+    const discountElement = $('.cost-summary-new .discount');
+    const vatElement = $('.cost-summary-new .vat');
+    const totalElement = $('.cost-summary-new .total-amount');
     const coursesStep = $('#coursesStep');
-    const toCoursesBtn = $('#toCoursesBtn');
-    const toAccountBtn = $('#toAccountBtn');
-    const backToContactBtn = $('#backToContactBtn');
-    const enrollBtn = $('#enrollNowBtn');
+    const enrollButton = $('#enrollNowBtn');
     const enrollHint = $('#enrollHint');
-
-    function setActiveProgress(step) {
-        $$('.progress-step').forEach((s, idx) => s.classList.toggle('active', idx <= step-1));
+    
+    // Update cost summary when courses are selected/deselected
+    function updateCostSummary() {
+        // Get prices of selected courses
+        const selectedPrices = courseCheckboxes
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseFloat(checkbox.value));
+        
+        // Calculate totals
+        const subtotal = selectedPrices.reduce((sum, price) => sum + price, 0);
+        const discount = selectedPrices.length >= 2 ? subtotal * 0.1 : 0; // 10% discount for 2+ courses
+        const vat = (subtotal - discount) * 0.15; // 15% VAT
+        const total = subtotal - discount + vat;
+        
+        // Update display
+        if (subtotalElement) subtotalElement.textContent = `R${subtotal.toFixed(2)}`;
+        if (discountElement) discountElement.textContent = `-R${discount.toFixed(2)}`;
+        if (vatElement) vatElement.textContent = `R${vat.toFixed(2)}`;
+        if (totalElement) totalElement.textContent = `R${total.toFixed(2)}`;
     }
-    function goTo(step) {
-        if (contactStep) contactStep.classList.toggle('hidden', step !== 1);
-        if (coursesStep) coursesStep.classList.toggle('hidden', step !== 2);
-        setActiveProgress(step);
+    
+    // Listen for course selection changes
+    courseCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateCostSummary);
+    });
+    
+    // Update progress bar
+    function updateProgressBar(currentStep) {
+        $$('.progress-step').forEach((step, index) => {
+            if (index < currentStep) {
+                step.classList.add('active');
+            } else {
+                step.classList.remove('active');
+            }
+        });
     }
-
-    function validateStep1() {
-        const firstName = $('#firstName')?.value.trim();
-        const lastName = $('#lastName')?.value.trim();
-        const email = $('#contactEmail')?.value.trim();
-        const phone = $('#contactPhone')?.value.trim();
-        if (!firstName || !lastName || !email || !phone) { alert('Please complete all required contact fields.'); return false; }
-        if (!isEmail(email)) { alert('Please enter a valid email.'); return false; }
-        if (phone.replace(/\D/g,'').length < 10) { alert('Please enter a valid phone number.'); return false; }
-        localStorage.setItem('enroll_contact', JSON.stringify({
-            firstName, lastName, email, phone, notes: ($('#specialReq')?.value || '').trim()
-        }));
+    
+    /* Code Attribution
+       Title: JavaScript classList toggle
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/howto/howto_js_toggle_class.asp
+    */
+    // Show specific step
+    function showStep(stepNumber) {
+        if (contactStep) {
+            contactStep.classList.toggle('hidden', stepNumber !== 1);
+        }
+        if (coursesStep) {
+            coursesStep.classList.toggle('hidden', stepNumber !== 2);
+        }
+        updateProgressBar(stepNumber);
+    }
+    
+    /* Code Attribution
+       Title: JavaScript alert
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/jsref/met_win_alert.asp
+    */
+    // Validate Step 1: Contact Details
+    function validateContactDetails() {
+        const firstName = $('#firstName')?.value.trim() || '';
+        const lastName = $('#lastName')?.value.trim() || '';
+        const email = $('#contactEmail')?.value.trim() || '';
+        const phone = $('#contactPhone')?.value.trim() || '';
+        
+        if (!firstName || !lastName || !email || !phone) {
+            alert('Please complete all required contact fields.');
+            return false;
+        }
+        
+        if (!isValidEmail(email)) {
+            alert('Please enter a valid email.');
+            return false;
+        }
+        
+        if (phone.replace(/\D/g, '').length < 10) {
+            alert('Please enter a valid phone number.');
+            return false;
+        }
+        
+        // Save contact details
+        const contactData = {
+            firstName,
+            lastName,
+            email,
+            phone,
+            notes: $('#specialReq')?.value.trim() || ''
+        };
+        localStorage.setItem('enroll_contact', JSON.stringify(contactData));
+        
         return true;
     }
-
-    function validateStep2() {
-        const selected = courseInputs.filter(cb => cb.checked);
-        if (!selected.length) { alert('Please select at least one course to continue.'); return false; }
-        const courses = selected.map(cb => {
-            const card = cb.closest('.course-card-new');
+    
+    /* Code Attribution
+       Title: JavaScript closest
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/jsref/met_element_closest.asp
+    */
+    // Validate Step 2: Course Selection
+    function validateCourseSelection() {
+        const selectedCourses = courseCheckboxes.filter(cb => cb.checked);
+        
+        if (selectedCourses.length === 0) {
+            alert('Please select at least one course to continue.');
+            return false;
+        }
+        
+        // Collect course data
+        const courses = selectedCourses.map(checkbox => {
+            const card = checkbox.closest('.course-card-new');
             return {
                 name: card.querySelector('.course-name-new')?.textContent.trim(),
                 duration: card.querySelector('.course-duration-new')?.textContent.trim(),
-                price: parseFloat(cb.value)
+                price: parseFloat(checkbox.value)
             };
         });
-        const sub = Number((subtotalEl?.textContent || '0').replace(/[^\d.]/g,'') || 0);
-        const disc = Number((discountEl?.textContent || '0').replace(/[^\d.]/g,'') || 0);
-        const vat = Number((vatEl?.textContent || '0').replace(/[^\d.]/g,'') || 0);
-        const total = Number((totalEl?.textContent || '0').replace(/[^\d.]/g,'') || 0);
-        localStorage.setItem('enroll_courses', JSON.stringify({ courses, subtotal: sub, discount: disc, vat, total }));
+        
+        // Get cost summary values
+        const subtotal = parseFloat(subtotalElement?.textContent.replace(/[^\d.]/g, '') || 0);
+        const discount = parseFloat(discountElement?.textContent.replace(/[^\d.]/g, '') || 0);
+        const vat = parseFloat(vatElement?.textContent.replace(/[^\d.]/g, '') || 0);
+        const total = parseFloat(totalElement?.textContent.replace(/[^\d.]/g, '') || 0);
+        
+        // Save course data
+        const courseData = { courses, subtotal, discount, vat, total };
+        localStorage.setItem('enroll_courses', JSON.stringify(courseData));
+        
         return true;
     }
-
-    function updateEnrollState() {
-        const contactOK = !!localStorage.getItem('enroll_contact');
-        const courseData = localStorage.getItem('enroll_courses');
-        const coursesOK = !!courseData && (JSON.parse(courseData).courses?.length > 0);
-        const userOK = !!localStorage.getItem('userData'); // set on signUp
-        const allOK = contactOK && coursesOK && userOK;
-        if (enrollBtn) {
-            enrollBtn.disabled = !allOK;
-            // FIXED: Prevent clicking if disabled
-            enrollBtn.style.pointerEvents = allOK ? 'auto' : 'none';
-            enrollBtn.style.cursor = allOK ? 'pointer' : 'not-allowed';
-        }
-        if (enrollHint) enrollHint.textContent = allOK ? 'All set! Click Enroll to finish.' : 'Complete steps 1–3 to enable';
-    }
-
-    toCoursesBtn?.addEventListener('click', () => { if (validateStep1()) { goTo(2); updateEnrollState(); } });
-    toAccountBtn?.addEventListener('click', () => { if (validateStep2()) window.location.href = 'signUp.html?from=fee'; });
-    backToContactBtn?.addEventListener('click', () => goTo(1));
     
-    // FIXED: Double-check validation before allowing navigation
-    enrollBtn?.addEventListener('click', () => {
-        const contactOK = !!localStorage.getItem('enroll_contact');
-        const courseData = localStorage.getItem('enroll_courses');
-        const coursesOK = !!courseData && (JSON.parse(courseData).courses?.length > 0);
-        const userOK = !!localStorage.getItem('userData');
+    // Check if all 3 steps are complete and update enroll button
+    function updateEnrollButton() {
+        const hasContactData = !!localStorage.getItem('enroll_contact');
+        const hasCourseData = !!localStorage.getItem('enroll_courses');
+        const hasUserAccount = !!localStorage.getItem('userData');
         
-        if (contactOK && coursesOK && userOK) {
-            window.location.href = 'enrollment-success.html';
-        } else {
-            alert('Please complete all 3 steps before enrolling.');
+        const allStepsComplete = hasContactData && hasCourseData && hasUserAccount;
+        
+        if (enrollButton) {
+            enrollButton.disabled = !allStepsComplete;
+            enrollButton.style.pointerEvents = allStepsComplete ? 'auto' : 'none';
+            enrollButton.style.cursor = allStepsComplete ? 'pointer' : 'not-allowed';
         }
-    });
-
-    // Always start at step 1 when first loading the page
+        
+        if (enrollHint) {
+            enrollHint.textContent = allStepsComplete 
+                ? 'All set! Click Enroll to finish.' 
+                : 'Complete steps 1–3 to enable';
+        }
+    }
+    
+    /* Code Attribution
+       Title: JavaScript Arrow Functions
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/js/js_arrow_function.asp
+    */
+    // Step 1 → Step 2: Contact Details to Course Selection
+    const nextToCourses = $('#toCoursesBtn');
+    if (nextToCourses) {
+        nextToCourses.addEventListener('click', () => {
+            if (validateContactDetails()) {
+                showStep(2);
+                updateEnrollButton();
+            }
+        });
+    }
+    
+    // Step 2 → Step 3: Course Selection to Sign Up
+    const nextToAccount = $('#toAccountBtn');
+    if (nextToAccount) {
+        nextToAccount.addEventListener('click', () => {
+            if (validateCourseSelection()) {
+                window.location.href = 'signUp.html?from=fee';
+            }
+        });
+    }
+    
+    // Back button: Step 2 → Step 1
+    const backButton = $('#backToContactBtn');
+    if (backButton) {
+        backButton.addEventListener('click', () => showStep(1));
+    }
+    
+    // Final Enroll button
+    if (enrollButton) {
+        enrollButton.addEventListener('click', () => {
+            const hasContactData = !!localStorage.getItem('enroll_contact');
+            const hasCourseData = !!localStorage.getItem('enroll_courses');
+            const hasUserAccount = !!localStorage.getItem('userData');
+            
+            if (hasContactData && hasCourseData && hasUserAccount) {
+                window.location.href = 'enrollment-success.html';
+            } else {
+                alert('Please complete all 3 steps before enrolling.');
+            }
+        });
+    }
+    
+    /* Code Attribution
+       Title: JavaScript Window Location Hash
+       Author: W3Schools
+       Date: 27 October 2025
+       Version: Not specified
+       Availability: https://www.w3schools.com/js/js_window_location.asp
+    */
+    // Check URL hash to determine starting step
     const urlHash = window.location.hash;
     if (urlHash === '#step2') {
-        goTo(2);
+        showStep(2);
     } else {
-        goTo(1);
+        showStep(1);
     }
     
-    updateCost();
-    updateEnrollState();
-    window.addEventListener('storage', updateEnrollState);
+    // Initialize
+    updateCostSummary();
+    updateEnrollButton();
+    
+    // Listen for localStorage changes (from other tabs)
+    window.addEventListener('storage', updateEnrollButton);
+}
+
+/* ========================================
+   5. SUCCESS PAGE CONFETTI
+   ======================================== */
+
+/* Code Attribution
+   Title: JavaScript for Loop
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/js/js_loop_for.asp
+*/
+/* Code Attribution
+   Title: JavaScript Math.random
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/js/js_random.asp
+*/
+/* Code Attribution
+   Title: JavaScript Math.floor
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/jsref_floor.asp
+*/
+/* Code Attribution
+   Title: JavaScript appendChild
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/met_node_appendchild.asp
+*/
+// Create confetti animation on success page
+function initSuccessConfetti() {
+    // Only run on success page
+    if (!document.body.classList.contains('success-page')) return;
+    
+    const colors = ['#ffffff', '#ffd166', '#ff6b6b', '#fcca46', '#118ab2', '#ef476f'];
+    
+    // Create 120 confetti pieces
+    for (let i = 0; i < 120; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        
+        // Random positioning and styling
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDuration = (2.5 + Math.random() * 2) + 's';
+        confetti.style.animationDelay = (Math.random() * 2) + 's';
+        confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+        
+        document.body.appendChild(confetti);
+    }
+}
+
+/* ========================================
+   INITIALIZE ALL FUNCTIONALITY
+   ======================================== */
+
+/* Code Attribution
+   Title: JavaScript DOMContentLoaded
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/jsref/event_domcontentloaded.asp
+*/
+// Run when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    initSearchModal();
+    initSignUpForm();
+    initFeeCalculator();
+    initSuccessConfetti();
 });
 
-/* ---------- Success Page Confetti (auto-run) ---------- */
-// One-liner: drops confetti if the page body uses .success-page.
-document.addEventListener('DOMContentLoaded', function () {
-    if (!document.body.classList.contains('success-page')) return;
-    const colors = ['#ffffff', '#ffd166', '#ff6b6b', '#fcca46', '#118ab2', '#ef476f'];
-    for (let i = 0; i < 120; i++) {
-        const c = document.createElement('div');
-        c.className = 'confetti';
-        c.style.left = Math.random()*100 + 'vw';
-        c.style.background = colors[(Math.random()*colors.length)|0];
-        c.style.animationDuration = (2.5 + Math.random()*2) + 's';
-        c.style.animationDelay = (Math.random()*2) + 's';
-        c.style.transform = `rotate(${Math.random()*360}deg)`;
-        document.body.appendChild(c);
-    }
-});
+/* Code Attribution
+   Title: JavaScript Window Object
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/js/js_window.asp
+*/
+// Make functions available globally for onclick handlers
+window.openSearch = openSearch;
+window.closeSearch = closeSearch;
+window.navigateTo = navigateTo;
+window.openTab = openTab;
+window.navigateToCourse = navigateToCourse;

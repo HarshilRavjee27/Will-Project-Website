@@ -1,18 +1,81 @@
 /* ===================================
    RESET & BASE STYLES
    =================================== */
+/* Code Attribution
+   Title: CSS Universal Selector
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_syntax.asp
+*/
+/* Code Attribution
+   Title: CSS Margin
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_margin.asp
+*/
+/* Code Attribution
+   Title: CSS Padding
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_padding.asp
+*/
+/* Code Attribution
+   Title: CSS Box Sizing
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_box-sizing.asp
+*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Code Attribution
+   Title: CSS Font Family
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_font.asp
+*/
+/* Code Attribution
+   Title: CSS Background Color
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_background.asp
+*/
+/* Code Attribution
+   Title: CSS Line Height
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_text.asp
+*/
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
     line-height: 1.6;
 }
 
+/* Code Attribution
+   Title: CSS Width and Height
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_dimension.asp
+*/
+/* Code Attribution
+   Title: CSS Min Height
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/pr_dim_min-height.php
+*/
 .container {
     width: 100%;
     margin: 0;
@@ -23,6 +86,34 @@ body {
 /* ===================================
    HEADER STYLES
    =================================== */
+/* Code Attribution
+   Title: CSS Flexbox
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_flexbox.asp
+*/
+/* Code Attribution
+   Title: CSS Justify Content
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/css3_pr_justify-content.php
+*/
+/* Code Attribution
+   Title: CSS Align Items
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/css3_pr_align-items.php
+*/
+/* Code Attribution
+   Title: CSS Border
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_border.asp
+*/
 .header {
     display: flex;
     justify-content: space-between;
@@ -37,17 +128,66 @@ body {
     height: 60px;
 }
 
+/* Code Attribution
+   Title: CSS Object Fit
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_object-fit.asp
+*/
 .logo-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
+/* Code Attribution
+   Title: CSS Gap
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_flexbox_container.asp
+*/
 .nav {
     display: flex;
     gap: 30px;
 }
 
+/* Code Attribution
+   Title: CSS Text Decoration
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_text_decoration.asp
+*/
+/* Code Attribution
+   Title: CSS Color
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_colors.asp
+*/
+/* Code Attribution
+   Title: CSS Font Weight
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/pr_font_weight.php
+*/
+/* Code Attribution
+   Title: CSS Transitions
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_transitions.asp
+*/
+/* Code Attribution
+   Title: CSS Position
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_positioning.asp
+*/
 .nav a {
     text-decoration: none;
     color: #666;
@@ -56,11 +196,25 @@ body {
     position: relative;
 }
 
+/* Code Attribution
+   Title: CSS Pseudo-classes
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_pseudo_classes.asp
+*/
 .nav a:hover,
 .nav a.active {
     color: #1ca8a1;
 }
 
+/* Code Attribution
+   Title: CSS Pseudo-elements
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_pseudo_elements.asp
+*/
 .nav a.active::after {
     content: '';
     position: absolute;
@@ -77,6 +231,27 @@ body {
     align-items: center;
 }
 
+/* Code Attribution
+   Title: CSS Font Size
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_font_size.asp
+*/
+/* Code Attribution
+   Title: CSS Cursor
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/pr_class_cursor.php
+*/
+/* Code Attribution
+   Title: CSS Transform
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_2dtransforms.asp
+*/
 .search-icon {
     font-size: 1.5rem;
     cursor: pointer;
@@ -87,6 +262,13 @@ body {
     transform: scale(1.1);
 }
 
+/* Code Attribution
+   Title: CSS Border Radius
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_borders.asp
+*/
 .signup-button {
     background-color: #22c6bd;
     color: white;
@@ -106,6 +288,20 @@ body {
 /* ===================================
    SEARCH MODAL STYLES
    =================================== */
+/* Code Attribution
+   Title: CSS Display Property
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_display_visibility.asp
+*/
+/* Code Attribution
+   Title: CSS Z-Index
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_z-index.asp
+*/
 .search-modal {
     display: none;
     position: fixed;
@@ -123,6 +319,20 @@ body {
     display: flex;
 }
 
+/* Code Attribution
+   Title: CSS Box Shadow
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_shadows_box.asp
+*/
+/* Code Attribution
+   Title: CSS Max Width
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/pr_dim_max-width.php
+*/
 .search-container {
     background: white;
     border-radius: 15px;
@@ -171,12 +381,33 @@ body {
     transition: all 0.3s;
 }
 
+/* Code Attribution
+   Title: CSS Outline
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_outline.asp
+*/
 .search-input:focus {
     outline: none;
     border-color: #EA5A0B;
     box-shadow: 0 0 0 3px rgba(234, 90, 11, 0.1);
 }
 
+/* Code Attribution
+   Title: CSS Overflow
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_overflow.asp
+*/
+/* Code Attribution
+   Title: CSS Max Height
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/pr_dim_max-height.php
+*/
 .search-results {
     max-height: 400px;
     overflow-y: auto;
@@ -210,6 +441,13 @@ body {
     font-size: 0.9rem;
 }
 
+/* Code Attribution
+   Title: CSS Text Align
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_text_align.asp
+*/
 .no-results {
     text-align: center;
     padding: 30px;
@@ -219,64 +457,82 @@ body {
 /* ===================================
    HERO SECTION (Homepage)
    =================================== */
+/* Code Attribution
+   Title: CSS Linear Gradient
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_gradients.asp
+*/
+/* Code Attribution
+   Title: CSS Flex Direction
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_flexbox_container.asp
+*/
 .hero-section {
-    display: flex;
-    background: linear-gradient(135deg, #EA5A0B 0%, #f7925b 100%);
+    position: relative;
     min-height: 500px;
+    background: linear-gradient(rgba(234, 90, 11, 0.3), rgba(247, 146, 91, 0.3));
     color: white;
-    align-items: center;
-    padding: 40px;
-}
-
-.hero-content {
-    flex: 2;
-    padding-right: 40px;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-    line-height: 1.2;
-}
-
-.hero-text p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
-
-.empowering-text {
-    font-style: italic;
-    font-weight: 500;
-}
-
-.mission-text {
-    font-weight: 600;
-}
-
-.skills-text {
-    color: #fde1d2;
-}
-
-.nurturing-text {
-    color: #FFF8DC;
-    font-size: 1.1rem;
-}
-
-.hero-image {
-    flex: 1;
+    text-align: center;
+    padding: 4rem 2rem;
+    overflow: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.hero-img {
-    width: 600px;
-    height: 600px;
-    border-radius: 15px;
+/* Code Attribution
+   Title: CSS Opacity
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_image_transparency.asp
+*/
+.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Code Attribution
+   Title: CSS Text Shadow
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_shadows.asp
+*/
+.hero-title {
+    font-size: 5.5rem;
+    font-weight: bold;
+    margin-bottom: 20rem;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image {
+    display: none;
+}
+
+.hero-img {
+    display: none;
 }
 
 /* ===================================
@@ -297,6 +553,13 @@ body {
     color: white;
 }
 
+/* Code Attribution
+   Title: CSS Font Style
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/pr_font_font-style.php
+*/
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 40px;
@@ -308,6 +571,20 @@ body {
     color: white;
 }
 
+/* Code Attribution
+   Title: CSS Grid Layout
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_grid.asp
+*/
+/* Code Attribution
+   Title: CSS Grid Template Columns
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_grid_container.asp
+*/
 .courses-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -316,6 +593,13 @@ body {
     margin: 0 auto;
 }
 
+/* Code Attribution
+   Title: CSS Animations
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_animations.asp
+*/
 .course-card {
     background: white;
     border-radius: 15px;
@@ -326,6 +610,20 @@ body {
     animation: fadeInUp 0.6s ease forwards;
 }
 
+/* Code Attribution
+   Title: CSS nth-child Selector
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/sel_nth-child.php
+*/
+/* Code Attribution
+   Title: CSS Animation Delay
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/css3_pr_animation-delay.php
+*/
 .course-card:nth-child(1) { animation-delay: 0.1s; }
 .course-card:nth-child(2) { animation-delay: 0.2s; }
 .course-card:nth-child(3) { animation-delay: 0.3s; }
@@ -424,6 +722,13 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Code Attribution
+   Title: CSS Rotate
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/css3_pr_transform.php
+*/
 .how-it-works-card:hover .icon-wrapper {
     transform: scale(1.1) rotate(5deg);
 }
@@ -762,6 +1067,13 @@ body {
     outline: none;
 }
 
+/* Code Attribution
+   Title: CSS Resize Property
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/css3_pr_resize.php
+*/
 .contact-form textarea {
     min-height: 150px;
     resize: vertical;
@@ -890,6 +1202,13 @@ body {
     font-style: italic;
 }
 
+/* Code Attribution
+   Title: CSS List Style
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_list.asp
+*/
 .learning-list {
     list-style: none;
     padding: 0;
@@ -1311,10 +1630,24 @@ body {
     border-bottom: 1px solid #eee;
 }
 
+/* Code Attribution
+   Title: CSS Last Child Selector
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/sel_last-child.php
+*/
 .summary-row-new:last-child {
     border-bottom: none;
 }
 
+/* Code Attribution
+   Title: CSS !important
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_important.asp
+*/
 .total-row {
     border-top: 2px solid #EA5A0B !important;
     margin-top: 0.5rem;
@@ -1405,6 +1738,13 @@ body {
     transform: translateY(-1px); 
 }
 
+/* Code Attribution
+   Title: CSS Disabled Pseudo-class
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/sel_disabled.php
+*/
 .enroll-now-btn:disabled {
     background: #ffb187;
     cursor: not-allowed;
@@ -1600,6 +1940,13 @@ body {
     box-shadow: 0 0 0 3px rgba(28,168,161,0.12);
 }
 
+/* Code Attribution
+   Title: CSS User Select
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/css3_pr_user-select.php
+*/
 .checkbox-row {
     display: flex;
     align-items: center;
@@ -1609,6 +1956,13 @@ body {
     user-select: none;
 }
 
+/* Code Attribution
+   Title: CSS Accent Color
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/css_pr_accent-color.php
+*/
 .checkbox-row input {
     width: 18px;
     height: 18px;
@@ -1710,6 +2064,13 @@ body {
 /* ===================================
    ANIMATIONS
    =================================== */
+/* Code Attribution
+   Title: CSS Keyframes
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_animations.asp
+*/
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1764,6 +2125,2237 @@ body {
 /* ===================================
    RESPONSIVE DESIGN
    =================================== */
+/* Code Attribution
+   Title: CSS Media Queries
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+*/
+@media (max-width: 992px) {
+    .signup-card { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .signup-aside { 
+        padding: 2rem; 
+        align-items: center; 
+        text-align: center; 
+    }
+    
+    .signup-form { 
+        padding: 2rem; 
+    }
+    
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .contact-info-section,
+    .venues-section {
+        border-right: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-section {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+    }
+    
+    .hero-img {
+        width: 100%;
+        height: 400px;
+    }
+    
+    .about-banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .success-content {
+        flex-direction: column;
+    }
+    
+    .founder-image img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .contact-title,
+    .venues-title {
+        font-size: 2rem;
+    }
+    
+    .venue-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .courses-section {
+        padding: 40px 20px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .courses-grid {
+        gap: 20px;
+    }/* filepath: c:\Users\DELL\Desktop\XHAW5112\Empowering the Nation Website\css-assets\Style.css */
+/* ===================================
+   RESET & BASE STYLES
+   =================================== */
+/* Code Attribution
+   Title: CSS Universal Selector
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_syntax.asp
+*/
+/* Code Attribution
+   Title: CSS Margin
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_margin.asp
+*/
+/* Code Attribution
+   Title: CSS Padding
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_padding.asp
+*/
+/* Code Attribution
+   Title: CSS Box Sizing
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_box-sizing.asp
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Code Attribution
+   Title: CSS Font Family
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_font.asp
+*/
+/* Code Attribution
+   Title: CSS Background Color
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_background.asp
+*/
+/* Code Attribution
+   Title: CSS Line Height
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_text.asp
+*/
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Code Attribution
+   Title: CSS Width and Height
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_dimension.asp
+*/
+/* Code Attribution
+   Title: CSS Min Height
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/pr_dim_min-height.php
+*/
+.container {
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    min-height: 100vh;
+}
+
+/* ===================================
+   HEADER STYLES
+   =================================== */
+/* Code Attribution
+   Title: CSS Flexbox
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_flexbox.asp
+*/
+/* Code Attribution
+   Title: CSS Justify Content
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/css3_pr_justify-content.php
+*/
+/* Code Attribution
+   Title: CSS Align Items
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/css3_pr_align-items.php
+*/
+/* Code Attribution
+   Title: CSS Border
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_border.asp
+*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+/* Code Attribution
+   Title: CSS Object Fit
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_object-fit.asp
+*/
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Code Attribution
+   Title: CSS Gap
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_flexbox_container.asp
+*/
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+/* Code Attribution
+   Title: CSS Text Decoration
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_text_decoration.asp
+*/
+/* Code Attribution
+   Title: CSS Color
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_colors.asp
+*/
+/* Code Attribution
+   Title: CSS Font Weight
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/pr_font_weight.php
+*/
+/* Code Attribution
+   Title: CSS Transitions
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_transitions.asp
+*/
+/* Code Attribution
+   Title: CSS Position
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_positioning.asp
+*/
+.nav a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+/* Code Attribution
+   Title: CSS Pseudo-classes
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_pseudo_classes.asp
+*/
+.nav a:hover,
+.nav a.active {
+    color: #1ca8a1;
+}
+
+/* Code Attribution
+   Title: CSS Pseudo-elements
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_pseudo_elements.asp
+*/
+.nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #1ca8a1;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Code Attribution
+   Title: CSS Font Size
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_font_size.asp
+*/
+/* Code Attribution
+   Title: CSS Cursor
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/pr_class_cursor.php
+*/
+/* Code Attribution
+   Title: CSS Transform
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_2dtransforms.asp
+*/
+.search-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.search-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Code Attribution
+   Title: CSS Border Radius
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_borders.asp
+*/
+.signup-button {
+    background-color: #22c6bd;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.signup-button:hover {
+    background-color: #1ca8a1;
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   SEARCH MODAL STYLES
+   =================================== */
+/* Code Attribution
+   Title: CSS Display Property
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_display_visibility.asp
+*/
+/* Code Attribution
+   Title: CSS Z-Index
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_z-index.asp
+*/
+.search-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-modal.active {
+    display: flex;
+}
+
+/* Code Attribution
+   Title: CSS Box Shadow
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_shadows_box.asp
+*/
+/* Code Attribution
+   Title: CSS Max Width
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/pr_dim_max-width.php
+*/
+.search-container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-header h3 {
+    color: #1ca8a1;
+    font-size: 1.5rem;
+}
+
+.close-search {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-search:hover {
+    color: #EA5A0B;
+}
+
+.search-input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border: 2px solid #1ca8a1;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+/* Code Attribution
+   Title: CSS Outline
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_outline.asp
+*/
+.search-input:focus {
+    outline: none;
+    border-color: #EA5A0B;
+    box-shadow: 0 0 0 3px rgba(234, 90, 11, 0.1);
+}
+
+/* Code Attribution
+   Title: CSS Overflow
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_overflow.asp
+*/
+/* Code Attribution
+   Title: CSS Max Height
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/pr_dim_max-height.php
+*/
+.search-results {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.search-result-item {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.search-result-item:hover {
+    background: #e3f2fd;
+    border-color: #1ca8a1;
+    transform: translateX(5px);
+}
+
+.result-title {
+    font-weight: 600;
+    color: #1ca8a1;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.result-description {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Code Attribution
+   Title: CSS Text Align
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_text_align.asp
+*/
+.no-results {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+}
+
+/* ===================================
+   HERO SECTION (Homepage)
+   =================================== */
+/* Code Attribution
+   Title: CSS Linear Gradient
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_gradients.asp
+*/
+/* Code Attribution
+   Title: CSS Flex Direction
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_flexbox_container.asp
+*/
+.hero-section {
+    position: relative;
+    min-height: 500px;
+    background: linear-gradient(rgba(234, 90, 11, 0.3), rgba(247, 146, 91, 0.3));
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Code Attribution
+   Title: CSS Opacity
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_image_transparency.asp
+*/
+.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Code Attribution
+   Title: CSS Text Shadow
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_shadows.asp
+*/
+.hero-title {
+    font-size: 5.5rem;
+    font-weight: bold;
+    margin-bottom: 20rem;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image {
+    display: none;
+}
+
+.hero-img {
+    display: none;
+}
+
+/* ===================================
+   COURSES SECTION
+   =================================== */
+.courses-section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.six-month {
+    background: #fff;
+    color: #333;
+}
+
+.six-week {
+    background: linear-gradient(135deg, #EA5A0B 0%, #f7925b 100%);
+    color: white;
+}
+
+/* Code Attribution
+   Title: CSS Font Style
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/pr_font_font-style.php
+*/
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-style: italic;
+    color: #2C3E50;
+}
+
+.six-week .section-title {
+    color: white;
+}
+
+/* Code Attribution
+   Title: CSS Grid Layout
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_grid.asp
+*/
+/* Code Attribution
+   Title: CSS Grid Template Columns
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_grid_container.asp
+*/
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Code Attribution
+   Title: CSS Animations
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_animations.asp
+*/
+.course-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Code Attribution
+   Title: CSS nth-child Selector
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/sel_nth-child.php
+*/
+/* Code Attribution
+   Title: CSS Animation Delay
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/css3_pr_animation-delay.php
+*/
+.course-card:nth-child(1) { animation-delay: 0.1s; }
+.course-card:nth-child(2) { animation-delay: 0.2s; }
+.course-card:nth-child(3) { animation-delay: 0.3s; }
+.course-card:nth-child(4) { animation-delay: 0.4s; }
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.course-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.course-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.course-content {
+    padding: 20px;
+    color: #333;
+    text-align: left;
+}
+
+.course-badge {
+    background: linear-gradient(135deg, #EA5A0B 0%, #f7925b 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.course-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* ===================================
+   HOW IT WORKS SECTION
+   =================================== */
+.how-it-works-section {
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #EA5A0B 0%, #f7925b 100%);
+    text-align: center;
+}
+
+.how-it-works-title {
+    font-size: 2.5rem;
+    color: #2C3E50;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.how-it-works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.how-it-works-card {
+    padding: 40px 30px;
+    background: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.how-it-works-card:nth-child(1) { animation-delay: 0.1s; }
+.how-it-works-card:nth-child(2) { animation-delay: 0.2s; }
+.how-it-works-card:nth-child(3) { animation-delay: 0.3s; }
+
+.how-it-works-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, #1ca8a1 0%, #22c6bd 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Code Attribution
+   Title: CSS Rotate
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/css3_pr_transform.php
+*/
+.how-it-works-card:hover .icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.icon {
+    font-size: 2.5rem;
+}
+
+.how-it-works-card h3 {
+    font-size: 1.5rem;
+    color: #2C3E50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.how-it-works-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ===================================
+   CTA SECTION
+   =================================== */
+.cta-section {
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #EA5A0B 0%, #f7925b 100%);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.cta-text {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 18px 45px;
+    background: white;
+    color: #EA5A0B;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+    background: #fde1d2;
+}
+
+/* ===================================
+   ABOUT PAGE - BANNER
+   =================================== */
+.about-banner {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(rgba(0, 183, 179, 0.9), rgba(0, 183, 179, 0.9));
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    overflow: hidden;
+}
+
+.about-banner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.about-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* ===================================
+   ABOUT PAGE - SUCCESS SECTION
+   =================================== */
+.success-section {
+    background-color: #f5f5f5;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.success-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.success-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3rem;
+    align-items: center;
+}
+
+.success-content p {
+    flex: 2;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+.founder-image {
+    flex: 1;
+    text-align: right;
+}
+
+.founder-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #00B7B3;
+}
+
+.founder-name {
+    margin-top: 2rem;
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #00B7B3;
+    text-align: right;
+    padding-right: 12%;
+}
+
+/* ===================================
+   TEAM SECTION
+   =================================== */
+.team-section {
+    background-color: #E6FFF9;
+    padding: 4rem 2rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 20px;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+    object-fit: cover;
+    border: 5px solid #00B7B3;
+}
+
+.team-content {
+    padding: 1.5rem;
+    text-align: center;
+    color: #333;
+}
+
+.team-name {
+    font-size: 1.5rem;
+    color: #1ca8a1;
+    margin-bottom: 10px;
+}
+
+.team-role {
+    color: #EA5A0B;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.team-description {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* ===================================
+   CONTACT PAGE
+   =================================== */
+.main-content {
+    display: flex;
+    min-height: calc(100vh - 140px);
+}
+
+.contact-info-section {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+    border-right: 1px solid #eee;
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    color: #00B7B3;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.contact-details {
+    margin-bottom: 2rem;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background-color: #E6FFF9;
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #00B7B3;
+    color: white;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.contact-link {
+    font-size: 1.1rem;
+    color: #00B7B3;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: #008080;
+    text-decoration: underline;
+}
+
+.get-in-touch {
+    margin-top: 2rem;
+}
+
+.get-in-touch h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00B7B3;
+    outline: none;
+}
+
+/* Code Attribution
+   Title: CSS Resize Property
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/css3_pr_resize.php
+*/
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.send-message {
+    background-color: #00B7B3;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.send-message:hover {
+    background-color: #008080;
+    transform: translateY(-3px);
+}
+
+.venues-section {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+    animation: slideInRight 0.6s ease forwards;
+}
+
+.venues-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.venues-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.venue-card {
+    background: whitesmoke;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.541);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.venue-card:hover {
+    transform: translateY(-10px);
+}
+
+.venue-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.venue-content {
+    padding: 1.5rem;
+}
+
+.venue-name {
+    font-size: 1.5rem;
+    color: #00B7B3;
+    margin-bottom: 0.5rem;
+}
+
+.venue-address {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.venue-link {
+    color: #00B7B3;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.venue-link:hover {
+    color: #008080;
+}
+
+/* ===================================
+   COURSE DETAIL PAGE
+   =================================== */
+.course-detail-section {
+    display: flex;
+    min-height: calc(100vh - 150px);
+}
+
+.course-info {
+    flex: 1;
+    padding: 4rem;
+    background: linear-gradient(135deg, #1ca8a1 0%, #22c6bd 100%);
+    color: white;
+}
+
+.course-title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    text-align: center;
+    font-style: italic;
+}
+
+.course-intro {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.learning-section {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.learning-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+/* Code Attribution
+   Title: CSS List Style
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_list.asp
+*/
+.learning-list {
+    list-style: none;
+    padding: 0;
+}
+
+.learning-list li {
+    padding: 0.8rem 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.course-enrollment {
+    flex: 1;
+    background: linear-gradient(135deg, #b0f2ee 0%, #b0f2ee 100%);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.course-image-container {
+    margin-bottom: 2rem;
+}
+
+.course-main-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.enrollment-card {
+    background: rgba(104, 98, 98, 0.397);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.price-section {
+    margin-bottom: 2rem;
+}
+
+.price {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.payment-type {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.enroll-button {
+    background: #EA5A0B;
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.enroll-button:hover {
+    transform: translateY(-3px);
+    background: #22c6bd;
+}
+
+/* ===================================
+   COURSE TABS SECTION
+   =================================== */
+.course-tabs {
+    padding: 2rem;
+    background: white;
+}
+
+.tab-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.tab-button {
+    background: transparent;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 8px;
+}
+
+.tab-button:hover {
+    background: #e6f9f8;
+}
+
+.tab-button.active {
+    background: #1ca8a1;
+    color: white;
+}
+
+.courses-dropdown {
+    margin-left: auto;
+    padding: 0.8rem 1rem;
+    border: 2px solid #1ca8a1;
+    border-radius: 8px;
+    background: white;
+    color: #1ca8a1;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.tab-pane {
+    display: none;
+    padding: 2rem;
+    background: white;
+    border-radius: 0 0 15px 15px;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-pane p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.instructor-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.instructor-info img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.instructor-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.instructor-info p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.review-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.review-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-header h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 1rem;
+}
+
+.review-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ===================================
+   FEE CALCULATOR STYLES
+   =================================== */
+.enroll-section-new {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: white;
+}
+
+.enroll-section-new h1 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.enroll-section-new p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.progress-bar-new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    max-width: 400px;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+}
+
+.step-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ddd;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.progress-step.active .step-circle {
+    background: #EA5A0B;
+}
+
+.progress-line {
+    width: 100px;
+    height: 2px;
+    background: #ddd;
+}
+
+.contact-details-new {
+    background: #f5f5f5;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    background: #fde1d2;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.form-container h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.form-group-new {
+    margin-bottom: 1rem;
+}
+
+.form-group-new label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.form-group-new input,
+.form-group-new textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background: white;
+}
+
+.form-row-new {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.course-selection-new {
+    padding: 4rem 2rem 2rem;
+    background: white;
+    text-align: center;
+}
+
+.course-selection-new h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.courses-container {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.course-card-new {
+    background: #EA5A0B;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.course-card-new:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(234, 90, 11, 0.2);
+}
+
+.course-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    color: white;
+}
+
+.course-card-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+
+.course-name-new {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.course-duration-new {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.course-price-new {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.course-card-new input[type="checkbox"] {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: white;
+}
+
+.cost-summary-new {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid #EA5A0B;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cost-summary-new h3 {
+    background: #EA5A0B;
+    color: white;
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.summary-content {
+    padding: 1.5rem;
+    background: white;
+}
+
+.summary-row-new {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Code Attribution
+   Title: CSS Last Child Selector
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/sel_last-child.php
+*/
+.summary-row-new:last-child {
+    border-bottom: none;
+}
+
+/* Code Attribution
+   Title: CSS !important
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_important.asp
+*/
+.total-row {
+    border-top: 2px solid #EA5A0B !important;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.total-amount {
+    color: #1ca8a1;
+    font-weight: bold;
+}
+
+.discount {
+    color: #dc3545;
+}
+
+.subtotal, .vat {
+    color: #333;
+}
+
+.hidden { 
+    display: none !important; 
+}
+
+.next-step-new {
+    background-color: #EA5A0B;
+    color: #fff;
+    border: none;
+    padding: 0.9rem 1.4rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.next-step-new:hover { 
+    background-color: #d94f09; 
+    transform: translateY(-1px); 
+}
+
+.form-container form { 
+    text-align: right; 
+}
+
+.action-row {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn-secondary {
+    background: #e9ecef;
+    color: #333;
+    border: none;
+    padding: 0.9rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.enroll-cta {
+    max-width: 800px;
+    margin: 2rem auto 3rem;
+    text-align: center;
+}
+
+.enroll-now-btn {
+    background: #EA5A0B;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.05rem;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.enroll-now-btn:hover { 
+    background:#d94f09; 
+    transform: translateY(-1px); 
+}
+
+/* Code Attribution
+   Title: CSS Disabled Pseudo-class
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/sel_disabled.php
+*/
+.enroll-now-btn:disabled {
+    background: #ffb187;
+    cursor: not-allowed;
+    opacity: .8;
+}
+
+.enroll-hint { 
+    margin-top:.5rem; 
+    color:#666; 
+    font-size:.9rem; 
+}
+
+/* ===================================
+   SUCCESS PAGE
+   =================================== */
+.success-page {
+    position: relative;
+    min-height: 100vh;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    background: linear-gradient(135deg, #1ca8a1 0%, #22c6bd 100%);
+    overflow: hidden; 
+    color: #fff; 
+    padding: 2rem;
+}
+
+.success-content-wrap { 
+    text-align: center; 
+    max-width: 820px; 
+}
+
+.success-logo {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.5rem;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.success-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.success-title { 
+    font-size: 2.6rem; 
+    font-weight: 800; 
+    margin: 1rem 0 .5rem; 
+}
+
+.success-sub { 
+    font-size: 1.15rem; 
+}
+
+.next-card {
+    margin: 1.6rem auto 0; 
+    background:#fff; 
+    color:#333;
+    border-radius: 12px; 
+    padding: 1.4rem; 
+    max-width: 720px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+
+.next-card h4{ 
+    color:#22c6bd; 
+    font-size:1.3rem; 
+    margin-bottom:.8rem; 
+}
+
+.confetti {
+    position: absolute; 
+    top:-10px; 
+    width: 8px; 
+    height: 14px;
+    opacity: .95; 
+    transform: translateY(-100px) rotate(0);
+    animation: fall 3s linear infinite; 
+    border-radius: 2px;
+}
+
+/* ===================================
+   SIGN UP PAGE
+   =================================== */
+.signup-section {
+    background: #f7f9fb;
+    padding: 4rem 1.5rem;
+}
+
+.signup-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.signup-card {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 0;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.signup-aside {
+    background: linear-gradient(135deg, #1ca8a1, #16968f);
+    color: #fff;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.signup-aside-img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.signup-aside h2 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.signup-aside p {
+    opacity: 0.95;
+}
+
+.signup-form {
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.signup-form h3 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.signup-subtitle {
+    color: #666;
+    margin-top: -0.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.signup-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 1rem 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.85rem 0.95rem;
+    border: 1px solid #e3e6eb;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: #fff;
+    color: #333;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1ca8a1;
+    box-shadow: 0 0 0 3px rgba(28,168,161,0.12);
+}
+
+/* Code Attribution
+   Title: CSS User Select
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/css3_pr_user-select.php
+*/
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.25rem;
+    color: #555;
+    user-select: none;
+}
+
+/* Code Attribution
+   Title: CSS Accent Color
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/cssref/css_pr_accent-color.php
+*/
+.checkbox-row input {
+    width: 18px;
+    height: 18px;
+    accent-color: #1ca8a1;
+}
+
+.signup-btn {
+    margin-top: 0.5rem;
+    background: #EA5A0B;
+    color: #fff;
+    border: none;
+    padding: 0.95rem 1.25rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background: #d94f09;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px rgba(234,90,11,0.25);
+}
+
+.signup-footer {
+    margin: 0.25rem 0 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.signup-footer a { 
+    color: #1ca8a1; 
+}
+
+.error-message {
+    background-color: #ff4444;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+
+.success-message {
+    background-color: #22c6bd;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #1ca8a1;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* ===================================
+   ANIMATIONS
+   =================================== */
+/* Code Attribution
+   Title: CSS Keyframes
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css3_animations.asp
+*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fall { 
+    to { 
+        transform: translateY(110vh) rotate(360deg); 
+        opacity: 1; 
+    } 
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+/* Code Attribution
+   Title: CSS Media Queries
+   Author: W3Schools
+   Date: 27 October 2025
+   Version: Not specified
+   Availability: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+*/
 @media (max-width: 992px) {
     .signup-card { 
         grid-template-columns: 1fr; 
@@ -1932,4 +4524,5 @@ body {
     .get-in-touch h2 {
         font-size: 1.5rem;
     }
+}
 }
