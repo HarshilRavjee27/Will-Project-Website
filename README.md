@@ -13,6 +13,8 @@ Christine Isaac ST10488220
 
 # Empowering the Nation - Web Application
 
+<img width="760" height="686" alt="image" src="https://github.com/user-attachments/assets/ed9b9221-cddf-4621-8a18-b5ab45fc2881" />
+
 
 ## 🎯 Project Overview
 
@@ -85,6 +87,7 @@ This project isn't just code—it's creating opportunities:
 
 ## 🎨 Wireframes
 
+<img width="628" height="986" alt="image" src="https://github.com/user-attachments/assets/c69834ce-aff8-43df-8f78-e58209a0193e" />
 
 
 ### 🏠 Screen 1: Homepage / Course Catalog
@@ -113,7 +116,8 @@ This project isn't just code—it's creating opportunities:
 
 
 
- 
+ <img width="777" height="764" alt="image" src="https://github.com/user-attachments/assets/f366645f-e472-4845-bc72-c29a7add4d4d" />
+
 
 
 ### 📚 Screen 2: Individual Course Page
@@ -142,6 +146,7 @@ This project isn't just code—it's creating opportunities:
 - Sample lesson preview videos
 - Social sharing buttons for course recommendations
 
+<img width="623" height="1030" alt="image" src="https://github.com/user-attachments/assets/38b5e634-3811-4234-b8db-60ff2e4f7d19" />
 
 
 ### 💰 Screen 3: Enrollment & Fee Calculator Page
@@ -192,6 +197,7 @@ This project isn't just code—it's creating opportunities:
 
 
  
+<img width="635" height="1225" alt="image" src="https://github.com/user-attachments/assets/b4c4f253-9caa-4f92-a34e-95b9fc214558" />
 
 
 
@@ -215,7 +221,8 @@ This project isn't just code—it's creating opportunities:
 - Student success stories integrated throughout
 - Call-to-action for partnerships and donations
  
- 
+ <img width="780" height="1088" alt="image" src="https://github.com/user-attachments/assets/eb060456-62d5-498e-9656-feef7254ec84" />
+
 
 
 ### Screen 5: Contact Us Page
@@ -258,9 +265,12 @@ Communication and location information including:
 ### Color Scheme & Branding
 Color palette designed for optimal user experience and brand consistency.
 
+<img width="623" height="1038" alt="image" src="https://github.com/user-attachments/assets/f34f2bf9-d840-47bd-a61c-8366fa05b588" />
 
 
  
+<img width="884" height="380" alt="image" src="https://github.com/user-attachments/assets/fcc3d51d-0dae-427c-8bb4-f2de84f4d5d8" />
+
 
 ## 📋 Pages Structure
 
@@ -383,6 +393,7 @@ Robust validation system implementing:
 - Graceful error recovery and user guidance
  
 
+<img width="940" height="838" alt="image" src="https://github.com/user-attachments/assets/752199a5-0554-47d5-8639-79fc5ce4062b" />
 
 
 
